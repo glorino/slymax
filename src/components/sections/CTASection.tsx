@@ -1,89 +1,125 @@
 "use client"
 
+import Image from "next/image"
+import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, Award, Truck, Users } from "lucide-react"
+import { ArrowRight, Shield, Award, Truck, Users, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 
-const trustIndicators = [
-  { icon: Shield, label: "ISO 9001:2015 Certified", description: "Quality management standards" },
-  { icon: Award, label: "50+ Years Experience", description: "Industry expertise since 1974" },
-  { icon: Truck, label: "Nationwide Coverage", description: "Service across all 36 states" },
-  { icon: Users, label: "200+ Expert Team", description: "Certified engineers & technicians" },
+const guarantees = [
+  { icon: Shield, label: "Zero Incident Safety" },
+  { icon: Award, label: "ISO 9001 Certified" },
+  { icon: Truck, label: "Nationwide Delivery" },
+  { icon: Users, label: "200+ Expert Team" },
 ]
 
 export function CTASection() {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden" aria-labelledby="cta-heading">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-900" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
-      
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
+          alt="Construction equipment at sunset"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/95 via-primary-800/90 to-primary-900/95" />
+      </div>
+
       <Container className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-4xl mx-auto mb-16"
-        >
-          <span className="inline-block px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 backdrop-blur-sm">
-            Ready to Start Your Project?
-          </span>
-          <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-            Partner with Nigeria's Trusted Industrial & Construction Leader
-          </h2>
-          <p className="text-lg text-primary-100 leading-relaxed">
-            Join hundreds of satisfied clients who trust Slymax Nigeria Limited for quality, safety, and on-time delivery.
-            Let's build something remarkable together.
-          </p>
-        </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+              Ready to Start Your{" "}
+              <span className="text-yellow-400">Next Project?</span>
+            </h2>
+            <p className="text-lg text-primary-100 leading-relaxed mb-8 max-w-lg">
+              Join hundreds of satisfied clients across Nigeria. Let&apos;s build something remarkable together.
+              Get a free consultation and detailed quote within 24 hours.
+            </p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-16"
-        >
-          {trustIndicators.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
-              className="flex items-center gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-colors"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/20">
-                <item.icon className="h-6 w-6 text-white" aria-hidden="true" />
-              </div>
-              <div>
-                <div className="font-semibold text-white">{item.label}</div>
-                <div className="text-sm text-primary-200">{item.description}</div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <Button asChild size="xl" className="gap-2 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white border-0 shadow-lg shadow-orange-500/25 px-8">
+                <Link href="/contact">
+                  Get a Free Quote
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="xl" className="gap-2 bg-white/10 backdrop-blur-md text-white border-white/20 hover:bg-white/20 px-8">
+                <Link href="tel:+2348031234567">
+                  <Phone className="h-5 w-5" aria-hidden="true" />
+                  Call Us Now
+                </Link>
+              </Button>
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
-        >
-          <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-primary-600 hover:bg-primary-50 shadow-lg hover:shadow-xl">
-            <a href="/contact">
-              Get Your Free Quote
-              <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="xl" className="w-full sm:w-auto px-10 py-4 border-white text-white hover:bg-white/10">
-            <a href="/about">
-              Learn More About Us
-            </a>
-          </Button>
-        </motion.div>
+            {/* Trust indicators */}
+            <div className="flex flex-wrap gap-4">
+              {guarantees.map((item) => (
+                <div key={item.label} className="flex items-center gap-2 text-white/80 text-sm">
+                  <item.icon className="h-4 w-4 text-yellow-400" aria-hidden="true" />
+                  {item.label}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Contact Info Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+          >
+            <h3 className="text-xl font-semibold text-white mb-6">Get in Touch</h3>
+            <div className="space-y-5">
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 flex-shrink-0">
+                  <Phone className="h-5 w-5 text-yellow-400" aria-hidden="true" />
+                </div>
+                <div>
+                  <div className="text-sm text-white/60 mb-1">Call Us</div>
+                  <div className="text-white font-medium">+234 803 123 4567</div>
+                  <div className="text-white font-medium">+234 805 987 6543</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 flex-shrink-0">
+                  <ArrowRight className="h-5 w-5 text-yellow-400 rotate-90" aria-hidden="true" />
+                </div>
+                <div>
+                  <div className="text-sm text-white/60 mb-1">Email Us</div>
+                  <div className="text-white font-medium">info@slymaxnig.com</div>
+                  <div className="text-white font-medium">sales@slymaxnig.com</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 flex-shrink-0">
+                  <Shield className="h-5 w-5 text-yellow-400" aria-hidden="true" />
+                </div>
+                <div>
+                  <div className="text-sm text-white/60 mb-1">Head Office</div>
+                  <div className="text-white font-medium">Plot 123, Industrial Layout</div>
+                  <div className="text-white/80">Owerri, Imo State, Nigeria</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <div className="text-sm text-white/60 mb-2">Working Hours</div>
+              <div className="text-white">Mon - Fri: 8:00 AM - 6:00 PM</div>
+              <div className="text-white/80">Sat: 9:00 AM - 2:00 PM</div>
+            </div>
+          </motion.div>
+        </div>
       </Container>
     </section>
   )
