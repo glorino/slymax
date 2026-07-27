@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: "info@slymaxnig.com\nsales@slymaxnig.com",
+    details: "info@slymaxnig.com",
     link: "mailto:info@slymaxnig.com",
   },
   {

@@ -100,7 +100,6 @@ export function CTASection() {
                 <div>
                   <div className="text-sm text-gray-300 mb-1">Email Us</div>
                   <div className="text-white font-medium">info@slymaxnig.com</div>
-                  <div className="text-white font-medium">sales@slymaxnig.com</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
