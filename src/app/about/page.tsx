@@ -154,36 +154,54 @@ export default function AboutPage() {
               Company Milestones
             </h2>
           </div>
-          <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-indigo-200 transform -translate-x-1/2 hidden lg:block" aria-hidden="true" />
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="relative flex lg:flex-row"
-                >
-                  <div className={index % 2 === 0 ? "lg:w-1/2 lg:pr-12 lg:text-right" : "lg:w-1/2 lg:pl-12 lg:ml-auto"}>
-                    <div className="bg-white p-6 rounded-2xl border border-indigo-100 shadow-sm hover:shadow-md transition-shadow relative">
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center font-bold text-sm lg:absolute lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-1/2 lg:ml-0">
+          <div className="relative max-w-4xl mx-auto">
+            {/* Center line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-indigo-200 -translate-x-1/2 hidden lg:block" aria-hidden="true" />
+            <div className="space-y-12">
+              {milestones.map((milestone, index) => {
+                const isLeft = index % 2 === 0
+                return (
+                  <motion.div
+                    key={milestone.year}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    className="relative lg:flex lg:items-center"
+                  >
+                    {/* Left side */}
+                    <div className={`lg:w-1/2 ${isLeft ? 'lg:pr-16 lg:text-right' : ''}`}>
+                      {isLeft && (
+                        <div className="bg-white p-6 rounded-2xl border border-indigo-100 shadow-sm hover:shadow-md transition-shadow inline-block text-left">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">{milestone.title}</h3>
+                          <p className="text-gray-600">{milestone.description}</p>
+                        </div>
+                      )}
+                    </div>
+                    {/* Center dot */}
+                    <div className="absolute left-1/2 -translate-x-1/2 z-10 hidden lg:flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-indigo-500/30">
                         {milestone.year}
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{milestone.title}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
                     </div>
-                  </div>
-                  <div className={index % 2 === 0 ? "lg:w-1/2" : "lg:w-1/2"}>
-                    <div className="lg:hidden text-center my-4">
-                      <div className="inline-block w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center font-bold text-sm">
+                    {/* Right side */}
+                    <div className={`lg:w-1/2 ${!isLeft ? 'lg:pl-16' : ''}`}>
+                      {!isLeft && (
+                        <div className="bg-white p-6 rounded-2xl border border-indigo-100 shadow-sm hover:shadow-md transition-shadow inline-block text-left">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">{milestone.title}</h3>
+                          <p className="text-gray-600">{milestone.description}</p>
+                        </div>
+                      )}
+                    </div>
+                    {/* Mobile dot */}
+                    <div className="lg:hidden absolute left-1/2 -translate-x-1/2 -top-6">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center font-bold text-xs">
                         {milestone.year}
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </Container>
