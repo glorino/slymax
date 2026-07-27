@@ -9,12 +9,12 @@ import { Container } from "@/components/ui/container"
 import { motion, AnimatePresence } from "framer-motion"
 
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=85", alt: "Telecommunication tower maintenance work" },
-  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85", alt: "Construction site with heavy machinery" },
-  { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=85", alt: "Building construction project" },
-  { src: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=85", alt: "Heavy equipment for haulage and transport" },
-  { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=85", alt: "Oil and gas pipeline infrastructure" },
-  { src: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=1920&q=85", alt: "Real estate development project" },
+  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=85", alt: "Telecommunication tower at sunset" },
+  { src: "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=1920&q=85", alt: "Aerial view of real estate development" },
+  { src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=85", alt: "Oil and gas industrial facility" },
+  { src: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=85", alt: "Heavy truck fleet for haulage" },
+  { src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=85", alt: "Building construction in progress" },
+  { src: "https://images.unsplash.com/photo-1580894742597-87bc870ddb17?w=1920&q=85", alt: "Telecom mast installation work" },
 ]
 
 const stats = [
@@ -79,9 +79,9 @@ export function Hero() {
             />
           </motion.div>
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gray-900/75" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-gray-900/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-900/20" />
+        <div className="absolute inset-0 bg-gray-900/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/30 to-gray-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
       </div>
 
       <div className="absolute bottom-24 left-0 right-0 z-20 flex justify-center gap-2 px-4">
