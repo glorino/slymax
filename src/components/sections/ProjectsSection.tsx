@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Building2, HardHat, Truck, Loader, Flame, Wrench, MapPin, ArrowRight, ExternalLink } from "lucide-react"
+import { MapPin, ArrowRight, ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
 
 const projects = [
@@ -19,7 +19,6 @@ const projects = [
     value: "₦2.4B",
     description: "Complete EPC of 50,000 sqm industrial facility including warehouses, offices, and infrastructure.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
-    icon: Building2,
   },
   {
     id: 2,
@@ -28,9 +27,8 @@ const projects = [
     location: "Anambra State",
     year: "2023",
     value: "₦850M",
-    description: "Design, fabrication, and erection of 200m span steel truss bridge.",
+    description: "Design, fabrication, and erection of 200m span steel truss bridge over Niger River tributary.",
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
-    icon: HardHat,
   },
   {
     id: 3,
@@ -39,9 +37,8 @@ const projects = [
     location: "Delta State",
     year: "2024",
     value: "₦320M",
-    description: "Full scaffolding system supply, erection, and inspection for refinery turnaround.",
+    description: "Full scaffolding system supply, erection, and inspection for refinery turnaround maintenance.",
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80",
-    icon: Wrench,
   },
   {
     id: 4,
@@ -50,9 +47,8 @@ const projects = [
     location: "Lagos State",
     year: "2023",
     value: "₦450M",
-    description: "Complete fire suppression, detection, and alarm system for 120,000 sqm complex.",
+    description: "Complete fire suppression, detection, and alarm system for 120,000 sqm shopping complex.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
-    icon: Flame,
   },
   {
     id: 5,
@@ -61,9 +57,8 @@ const projects = [
     location: "FCT Abuja",
     year: "2024",
     value: "₦1.2B",
-    description: "Long-term lease of earthmoving fleet for federal highway construction.",
+    description: "Long-term lease of earthmoving fleet for federal highway construction project.",
     image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
-    icon: Truck,
   },
   {
     id: 6,
@@ -72,9 +67,8 @@ const projects = [
     location: "Kano State",
     year: "2023",
     value: "₦180M",
-    description: "Design, supply, and installation of 12 wall-mounted jib cranes.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80",
-    icon: Loader,
+    description: "Design, supply, and installation of 12 wall-mounted jib cranes for manufacturing facility.",
+    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80",
   },
 ]
 

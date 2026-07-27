@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
-import { Building2, Award, Shield, Users, Truck, HardHat, CheckCircle, ArrowRight, Target, Globe } from "lucide-react"
+import { Building2, Award, Shield, Users, Target, Globe, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 const values = [
@@ -46,7 +46,7 @@ export function AboutSection() {
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Image Side */}
+          {/* Image Side - Construction engineers at site */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -55,30 +55,47 @@ export function AboutSection() {
             className="relative"
           >
             <div className="relative">
-              {/* Main image */}
+              {/* Main image - engineers reviewing plans on construction site */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
-                  alt="Slymax construction team at work site"
+                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=85"
+                  alt="Slymax engineers reviewing construction blueprints on site"
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover"
                 />
               </div>
 
-              {/* Floating experience badge */}
+              {/* Second image - steel structure */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="absolute -bottom-8 -right-8 w-48 h-48 rounded-xl overflow-hidden shadow-xl border-4 border-white hidden lg:block"
+              >
+                <Image
+                  src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&q=80"
+                  alt="Steel structure framework"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Experience badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="absolute -bottom-6 -right-6 bg-gradient-to-br from-primary-600 to-primary-800 text-white p-6 rounded-2xl shadow-xl"
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="absolute -top-6 -left-6 bg-gradient-to-br from-primary-600 to-primary-800 text-white p-5 rounded-2xl shadow-xl"
               >
-                <div className="text-4xl font-bold mb-1">50+</div>
+                <div className="text-3xl font-bold mb-1">50+</div>
                 <div className="text-primary-200 text-sm">Years of Excellence</div>
               </motion.div>
 
-              {/* Decorative elements */}
+              {/* Decorative corner */}
               <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary-200 rounded-2xl" aria-hidden="true" />
             </div>
           </motion.div>
@@ -97,9 +114,14 @@ export function AboutSection() {
               Building Nigeria&apos;s Future Since{" "}
               <span className="text-primary-600">1974</span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-lg text-gray-600 leading-relaxed mb-4">
               From a modest construction firm in Owerri to one of Nigeria&apos;s leading integrated industrial solutions providers.
               Our journey is built on trust, quality, and unwavering commitment to client success.
+            </p>
+            <p className="text-gray-500 leading-relaxed mb-8">
+              We specialize in construction, steel material supply, scaffolding, gas & fire equipment, 
+              heavy equipment leasing, and jib crane supply — providing end-to-end solutions for industrial 
+              and commercial projects across all 36 states.
             </p>
 
             {/* Values grid */}
@@ -141,7 +163,7 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {highlights.map((item, index) => (
+          {highlights.map((item) => (
             <div
               key={item.label}
               className="relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100 text-center group hover:shadow-lg transition-all duration-300"

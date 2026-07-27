@@ -17,11 +17,11 @@ const guarantees = [
 export function CTASection() {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden" aria-labelledby="cta-heading">
-      {/* Background Image */}
+      {/* Background - heavy equipment at construction site */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
-          alt="Construction equipment at sunset"
+          src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=85"
+          alt="Heavy construction equipment at work site"
           fill
           className="object-cover"
         />
@@ -60,7 +60,6 @@ export function CTASection() {
               </Button>
             </div>
 
-            {/* Trust indicators */}
             <div className="flex flex-wrap gap-4">
               {guarantees.map((item) => (
                 <div key={item.label} className="flex items-center gap-2 text-white/80 text-sm">

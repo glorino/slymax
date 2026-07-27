@@ -5,81 +5,71 @@ import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, HardHat, Building2, Wrench, Flame, Truck, Loader } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
 
 const services = [
   {
     name: "Construction",
     href: "/services/construction",
-    icon: HardHat,
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
     description: "Complete building and civil engineering solutions from foundation to finish.",
     features: ["Building Construction", "Road & Bridge Works", "Industrial Facilities"],
-    color: "from-blue-500 to-blue-700",
+    gradient: "from-blue-600 to-blue-800",
   },
   {
     name: "Steel Material Supply",
     href: "/services/steel-material-supply",
-    icon: Building2,
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80",
     description: "Premium quality steel and structural materials for all construction needs.",
     features: ["Structural Steel", "Reinforcement Bars", "Steel Pipes & Tubes"],
-    color: "from-gray-600 to-gray-800",
+    gradient: "from-gray-600 to-gray-800",
   },
   {
     name: "Scaffold Material",
     href: "/services/scaffold-material",
-    icon: Wrench,
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
     description: "Complete scaffolding systems for safe working at heights.",
     features: ["Frame Scaffolding", "System Scaffolding", "Mobile Towers"],
-    color: "from-orange-500 to-orange-700",
+    gradient: "from-orange-500 to-orange-700",
   },
   {
     name: "Gas Equipment",
     href: "/services/gas-equipment",
-    icon: Flame,
     image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
     description: "Industrial gas equipment, regulators, valves, and piping systems.",
     features: ["Gas Regulators", "Valves & Fittings", "Safety Devices"],
-    color: "from-red-500 to-red-700",
+    gradient: "from-red-500 to-red-700",
   },
   {
     name: "Fire Equipment",
     href: "/services/fire-equipment",
-    icon: Flame,
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
     description: "Comprehensive fire fighting and safety equipment.",
     features: ["Fire Extinguishers", "Hydrant Systems", "Alarm Systems"],
-    color: "from-red-600 to-red-800",
+    gradient: "from-red-600 to-red-800",
   },
   {
     name: "Heavy Equipment Leasing",
     href: "/services/heavy-equipment-leasing",
-    icon: Truck,
     image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
     description: "Modern fleet of heavy machinery for rent with certified operators.",
     features: ["Excavators & Loaders", "Mobile Cranes", "Bulldozers & Graders"],
-    color: "from-yellow-600 to-yellow-800",
+    gradient: "from-yellow-600 to-yellow-800",
   },
   {
     name: "Jib Crane Supply",
     href: "/services/jib-crane-supply",
-    icon: Loader,
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80",
     description: "Custom jib cranes and lifting solutions for workshops and warehouses.",
     features: ["Wall-Mounted Jibs", "Floor-Mounted Jibs", "Custom Fabrication"],
-    color: "from-purple-500 to-purple-700",
+    gradient: "from-purple-500 to-purple-700",
   },
 ]
 
 export function ServicesSection() {
   return (
     <section className="py-20 lg:py-32 bg-gray-50 relative overflow-hidden" aria-labelledby="services-heading">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-30" aria-hidden="true" />
-
       <Container className="relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
@@ -124,7 +114,7 @@ export function ServicesSection() {
             >
               <Link href={service.href}>
                 <Card className="group h-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-0 bg-white">
-                  {/* Image */}
+                  {/* Image with overlay */}
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={service.image}
@@ -132,15 +122,12 @@ export function ServicesSection() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-60`} />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-70`} />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <service.icon className="h-12 w-12 text-white" aria-hidden="true" />
+                      <h3 className="text-2xl font-bold text-white text-center px-4">{service.name}</h3>
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                      {service.name}
-                    </h3>
                     <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.description}</p>
                     <ul className="space-y-2 mb-4" role="list">
                       {service.features.map((feature) => (
