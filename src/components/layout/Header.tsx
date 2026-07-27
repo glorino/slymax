@@ -64,11 +64,12 @@ export function Header() {
               aria-label="Slymax Nigeria Limited - Home"
             >
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Slymax Nigeria Limited Logo"
-                width={44}
-                height={44}
-                className="h-10 w-10 lg:h-11 lg:w-11"
+                width={48}
+                height={48}
+                className="h-10 w-10 lg:h-12 lg:w-12 object-contain"
+                priority
               />
               <span className="hidden sm:block text-lg lg:text-xl">Slymax Nigeria Limited</span>
             </Link>

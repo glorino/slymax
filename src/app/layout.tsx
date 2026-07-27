@@ -85,9 +85,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(inter.variable, "scroll-smooth")}>
       <head>
+        <link rel="icon" href="/logo.png" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="min-h-screen bg-white font-sans antialiased text-slate-900 dark:bg-slate-950 dark:text-slate-100">

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import {
   Building2,
@@ -59,8 +60,14 @@ export function Footer() {
       <Container className="py-16 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-2 xl:grid-cols-5">
           <div className="xl:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-white" aria-label="Slymax Nigeria Limited - Home">
-              <Building2 className="h-10 w-10 text-primary-500" aria-hidden="true" />
+            <Link href="/" className="flex items-center gap-3 text-2xl font-bold text-white" aria-label="Slymax Nigeria Limited - Home">
+              <Image
+                src="/logo.png"
+                alt="Slymax Nigeria Limited Logo"
+                width={48}
+                height={48}
+                className="h-10 w-10 object-contain"
+              />
               <span>Slymax Nigeria Limited</span>
             </Link>
             <p className="text-gray-400 max-w-xs leading-relaxed">{companyInfo.tagline}</p>
