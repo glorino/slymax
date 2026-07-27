@@ -48,7 +48,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-gray-50 via-white to-gray-50">
+      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32 text-center">
           <motion.div
@@ -77,7 +77,7 @@ export default function ContactPage() {
       <ContactForm />
 
       {/* Alternative Contact Methods */}
-      <section className="py-20 lg:py-32 bg-gray-50" aria-labelledby="alt-contact-heading">
+      <section className="py-20 lg:py-32 bg-white" aria-labelledby="alt-contact-heading">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">

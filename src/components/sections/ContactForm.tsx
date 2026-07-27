@@ -91,7 +91,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50" aria-labelledby="contact-heading">
+    <section className="py-20 lg:py-32 bg-white" aria-labelledby="contact-heading">
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <motion.div

@@ -39,9 +39,9 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50" aria-labelledby="about-heading">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full -translate-y-1/2 translate-x-1/2 opacity-30" aria-hidden="true" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-200 rounded-full translate-y-1/2 -translate-x-1/2 opacity-30" aria-hidden="true" />
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white" aria-labelledby="about-heading">
+      <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-40 blur-3xl" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-60 h-60 bg-cyan-100 rounded-full translate-y-1/2 -translate-x-1/2 opacity-40 blur-3xl" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">

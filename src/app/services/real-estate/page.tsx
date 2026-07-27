@@ -46,9 +46,9 @@ const whyChooseUs = [
 export default function RealEstatePage() {
   return (
     <>
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-emerald-100 via-emerald-50 to-white overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-300 rounded-full translate-x-1/3 -translate-y-1/3 opacity-20" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -107,7 +107,7 @@ export default function RealEstatePage() {
         </Container>
       </section>
 
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-emerald-50/30 to-white" aria-labelledby="services-heading">
+      <section className="py-20 lg:py-32 bg-white" aria-labelledby="services-heading">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">

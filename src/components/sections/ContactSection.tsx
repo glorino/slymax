@@ -62,9 +62,9 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50" aria-labelledby="contact-heading">
-      <div className="absolute top-0 left-0 w-80 h-80 bg-violet-200 rounded-full -translate-x-1/3 -translate-y-1/3 opacity-30" aria-hidden="true" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-200 rounded-full translate-x-1/4 translate-y-1/4 opacity-25" aria-hidden="true" />
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-white to-slate-50" aria-labelledby="contact-heading">
+      <div className="absolute top-0 left-0 w-72 h-72 bg-violet-100 rounded-full -translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-100 rounded-full translate-x-1/4 translate-y-1/4 opacity-30 blur-3xl" aria-hidden="true" />
 
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">

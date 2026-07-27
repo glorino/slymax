@@ -64,9 +64,9 @@ const filterCategories = ["All", "Telecommunication", "Real Estate", "Oil and Ga
 export default function ProjectsPage() {
   return (
     <>
-      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-emerald-100 via-emerald-50 to-white overflow-hidden">
+      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-20" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto">
             <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">Project Portfolio</span>
@@ -80,7 +80,7 @@ export default function ProjectsPage() {
         </Container>
       </section>
 
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-emerald-50/30 to-white" aria-labelledby="projects-heading">
+      <section className="py-20 lg:py-32 bg-white" aria-labelledby="projects-heading">
         <Container>
           <div className="flex flex-wrap justify-center gap-2 mb-12" role="group" aria-label="Filter projects by category">
             {filterCategories.map((category) => (

@@ -79,9 +79,9 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50" aria-labelledby="projects-heading">
-      <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-30" aria-hidden="true" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-25" aria-hidden="true" />
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white" aria-labelledby="projects-heading">
+      <div className="absolute top-0 right-0 w-72 h-72 bg-emerald-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-56 h-56 bg-teal-100 rounded-full -translate-x-1/4 translate-y-1/4 opacity-30 blur-3xl" aria-hidden="true" />
 
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
