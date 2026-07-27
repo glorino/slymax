@@ -16,6 +16,8 @@ const services = [
     description: "Complete building and civil engineering solutions from foundation to finish.",
     features: ["Building Construction", "Road & Bridge Works", "Industrial Facilities"],
     gradient: "from-blue-600 to-blue-800",
+    bgCard: "bg-blue-50",
+    iconColor: "text-blue-600",
   },
   {
     name: "Steel Material Supply",
@@ -24,6 +26,8 @@ const services = [
     description: "Premium quality steel and structural materials for all construction needs.",
     features: ["Structural Steel", "Reinforcement Bars", "Steel Pipes & Tubes"],
     gradient: "from-gray-600 to-gray-800",
+    bgCard: "bg-gray-50",
+    iconColor: "text-gray-600",
   },
   {
     name: "Scaffold Material",
@@ -32,6 +36,8 @@ const services = [
     description: "Complete scaffolding systems for safe working at heights.",
     features: ["Frame Scaffolding", "System Scaffolding", "Mobile Towers"],
     gradient: "from-orange-500 to-orange-700",
+    bgCard: "bg-orange-50",
+    iconColor: "text-orange-600",
   },
   {
     name: "Gas Equipment",
@@ -40,6 +46,8 @@ const services = [
     description: "Industrial gas equipment, regulators, valves, and piping systems.",
     features: ["Gas Regulators", "Valves & Fittings", "Safety Devices"],
     gradient: "from-red-500 to-red-700",
+    bgCard: "bg-red-50",
+    iconColor: "text-red-600",
   },
   {
     name: "Fire Equipment",
@@ -48,6 +56,8 @@ const services = [
     description: "Comprehensive fire fighting and safety equipment.",
     features: ["Fire Extinguishers", "Hydrant Systems", "Alarm Systems"],
     gradient: "from-red-600 to-red-800",
+    bgCard: "bg-red-50",
+    iconColor: "text-red-700",
   },
   {
     name: "Heavy Equipment Leasing",
@@ -56,6 +66,8 @@ const services = [
     description: "Modern fleet of heavy machinery for rent with certified operators.",
     features: ["Excavators & Loaders", "Mobile Cranes", "Bulldozers & Graders"],
     gradient: "from-yellow-600 to-yellow-800",
+    bgCard: "bg-yellow-50",
+    iconColor: "text-yellow-600",
   },
   {
     name: "Jib Crane Supply",
@@ -64,19 +76,24 @@ const services = [
     description: "Custom jib cranes and lifting solutions for workshops and warehouses.",
     features: ["Wall-Mounted Jibs", "Floor-Mounted Jibs", "Custom Fabrication"],
     gradient: "from-purple-500 to-purple-700",
+    bgCard: "bg-purple-50",
+    iconColor: "text-purple-600",
   },
 ]
 
 export function ServicesSection() {
   return (
-    <section className="py-20 lg:py-32 bg-gray-50 relative overflow-hidden" aria-labelledby="services-heading">
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50" aria-labelledby="services-heading">
+      <div className="absolute top-0 left-0 w-72 h-72 bg-orange-200 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-30" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-200 rounded-full translate-x-1/3 translate-y-1/3 opacity-25" aria-hidden="true" />
+
       <Container className="relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4"
+            className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-4"
           >
             Our Comprehensive Solutions
           </motion.span>
@@ -89,7 +106,7 @@ export function ServicesSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
           >
             Services Tailored to{" "}
-            <span className="text-primary-600">Your Project Needs</span>
+            <span className="text-orange-600">Your Project Needs</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -113,7 +130,7 @@ export function ServicesSection() {
               transition={{ delay: index * 0.08, duration: 0.5 }}
             >
               <Link href={service.href}>
-                <Card className="group h-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-0 bg-white">
+                <Card className={`group h-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-0 ${service.bgCard}`}>
                   {/* Image with overlay */}
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -132,12 +149,12 @@ export function ServicesSection() {
                     <ul className="space-y-2 mb-4" role="list">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-primary-600 flex-shrink-0" aria-hidden="true" />
+                          <CheckCircle className={`h-4 w-4 ${service.iconColor} flex-shrink-0`} aria-hidden="true" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center text-primary-600 font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                    <div className="flex items-center text-orange-600 font-medium text-sm group-hover:gap-3 gap-2 transition-all">
                       Learn More
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                     </div>
@@ -149,7 +166,7 @@ export function ServicesSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild variant="outline" size="lg" className="px-10 py-3">
+          <Button asChild size="lg" className="px-10 py-3 bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white">
             <Link href="/contact">
               Request a Quote for Your Project
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

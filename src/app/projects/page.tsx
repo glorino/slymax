@@ -134,8 +134,10 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-gray-50 via-white to-gray-50">
+      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-emerald-100 via-emerald-50 to-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-20" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,13 +145,13 @@ export default function ProjectsPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
               Project Portfolio
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Delivering Excellence
               <br />
-              <span className="text-primary-600">Across Nigeria</span>
+              <span className="text-emerald-600">Across Nigeria</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               A showcase of landmark projects demonstrating our capability across construction, 
@@ -160,7 +162,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Filter & Projects Grid */}
-      <section className="py-20 lg:py-32 bg-white" aria-labelledby="projects-heading">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-emerald-50/30 to-white" aria-labelledby="projects-heading">
         <Container>
           <div className="flex flex-wrap justify-center gap-2 mb-12" role="group" aria-label="Filter projects by category">
             {filterCategories.map((category) => (
@@ -168,8 +170,8 @@ export default function ProjectsPage() {
                 key={category}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   category === "All"
-                    ? "bg-primary-600 text-white shadow-sm"
-                    : "bg-gray-100 text-gray-700 hover:bg-primary-50 hover:text-primary-600"
+                    ? "bg-emerald-600 text-white shadow-sm"
+                    : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 border border-emerald-200"
                 }`}
                 aria-pressed={category === "All"}
               >
@@ -187,17 +189,17 @@ export default function ProjectsPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                <Card className="h-full border-0 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden group">
-                  <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200">
+                <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden group">
+                  <div className="relative aspect-video bg-gradient-to-br from-emerald-100 to-teal-200">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <project.icon className="h-16 w-16 text-gray-300" aria-hidden="true" />
+                      <project.icon className="h-16 w-16 text-emerald-300" aria-hidden="true" />
                     </div>
                     <div className="absolute top-4 right-4">
-                      <Badge variant="secondary">{project.category}</Badge>
+                      <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm text-emerald-700">{project.category}</Badge>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                       <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-sm">
-                        <MapPin className="h-3.5 w-3.5 text-primary-600" aria-hidden="true" />
+                        <MapPin className="h-3.5 w-3.5 text-emerald-600" aria-hidden="true" />
                         <span className="text-sm font-medium text-gray-700">{project.location}</span>
                       </div>
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-sm">
@@ -206,18 +208,18 @@ export default function ProjectsPage() {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.description}</p>
                     
-                    <div className="grid grid-cols-2 gap-3 mb-4 p-4 bg-gray-50 rounded-xl">
+                    <div className="grid grid-cols-2 gap-3 mb-4 p-4 bg-emerald-50 rounded-xl">
                       <div>
-                        <p className="text-xs text-gray-500 uppercase tracking-wide">Duration</p>
+                        <p className="text-xs text-emerald-600 uppercase tracking-wide font-medium">Duration</p>
                         <p className="font-medium text-gray-900">{project.duration}</p>
                       </div>
                       <div>
-                        <p className="text-xs text-gray-500 uppercase tracking-wide">Value</p>
+                        <p className="text-xs text-emerald-600 uppercase tracking-wide font-medium">Value</p>
                         <p className="font-medium text-gray-900">{project.value}</p>
                       </div>
                     </div>
@@ -225,20 +227,20 @@ export default function ProjectsPage() {
                     <ul className="space-y-1.5 mb-6" role="list">
                       {project.features.slice(0, 3).map((feature) => (
                         <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                          <span className="h-1.5 w-1.5 rounded-full bg-primary-600 flex-shrink-0" aria-hidden="true" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 flex-shrink-0" aria-hidden="true" />
                           {feature}
                         </li>
                       ))}
                       {project.features.length > 3 && (
-                        <li className="flex items-center gap-2 text-sm text-primary-600 font-medium">
+                        <li className="flex items-center gap-2 text-sm text-emerald-600 font-medium">
                           <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                           +{project.features.length - 3} more features
                         </li>
                       )}
                     </ul>
 
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <Button variant="ghost" className="px-0 text-primary-600 hover:text-primary-700" asChild>
+                    <div className="flex items-center justify-between pt-4 border-t border-emerald-100">
+                      <Button variant="ghost" className="px-0 text-emerald-600 hover:text-emerald-700" asChild>
                         <Link href="/contact">
                           Discuss Similar Project
                           <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
@@ -256,7 +258,7 @@ export default function ProjectsPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild variant="outline" size="lg" className="px-10 py-3">
+            <Button asChild size="lg" className="px-10 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white">
               <Link href="/contact">
                 Have a Project in Mind?
                 <ExternalLink className="ml-2 h-5 w-5" aria-hidden="true" />
@@ -267,8 +269,10 @@ export default function ProjectsPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 lg:py-32 bg-gray-900 text-white relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full -translate-y-1/4 translate-x-1/4" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-500/10 rounded-full translate-y-1/4 -translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-6">
@@ -294,8 +298,8 @@ export default function ProjectsPage() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 mx-auto mb-4">
-                  <stat.icon className="h-7 w-7 text-primary-400" aria-hidden="true" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 mx-auto mb-4 border border-emerald-500/30">
+                  <stat.icon className="h-7 w-7 text-emerald-400" aria-hidden="true" />
                 </div>
                 <div className="text-4xl sm:text-5xl font-bold mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
@@ -306,8 +310,10 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-900 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/3 translate-x-1/3" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full translate-y-1/4 -translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -319,12 +325,12 @@ export default function ProjectsPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               Let's Build Your Next Success Story
             </h2>
-            <p className="text-lg text-primary-100 leading-relaxed mb-8">
+            <p className="text-lg text-teal-100 leading-relaxed mb-8">
               From concept to completion, we bring the expertise, equipment, and dedication 
               to make your project a landmark achievement.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-primary-600 hover:bg-primary-50 shadow-lg hover:shadow-xl" variant="default">
+              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-emerald-600 hover:bg-emerald-50 shadow-lg hover:shadow-xl" variant="default">
                 <Link href="/contact">
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

@@ -39,10 +39,11 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden" aria-labelledby="about-heading">
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50" aria-labelledby="about-heading">
       {/* Decorative background */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-50 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50" aria-hidden="true" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-50 rounded-full translate-y-1/2 -translate-x-1/2 opacity-50" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full -translate-y-1/2 translate-x-1/2 opacity-30" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-200 rounded-full translate-y-1/2 -translate-x-1/2 opacity-30" aria-hidden="true" />
+      <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-indigo-100 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-20" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
@@ -89,14 +90,14 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="absolute -top-6 -left-6 bg-gradient-to-br from-primary-600 to-primary-800 text-white p-5 rounded-2xl shadow-xl"
+                className="absolute -top-6 -left-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-5 rounded-2xl shadow-xl"
               >
                 <div className="text-3xl font-bold mb-1">50+</div>
-                <div className="text-primary-200 text-sm">Years of Excellence</div>
+                <div className="text-blue-200 text-sm">Years of Excellence</div>
               </motion.div>
 
               {/* Decorative corner */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary-200 rounded-2xl" aria-hidden="true" />
+              <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-blue-200 rounded-2xl" aria-hidden="true" />
             </div>
           </motion.div>
 
@@ -107,12 +108,12 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
               About Slymax Nigeria Limited
             </span>
             <h2 id="about-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Building Nigeria&apos;s Future Since{" "}
-              <span className="text-primary-600">1974</span>
+              <span className="text-blue-600">1974</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-4">
               From a modest construction firm in Owerri to one of Nigeria&apos;s leading integrated industrial solutions providers.
@@ -133,9 +134,9 @@ export function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 hover:bg-primary-50 transition-colors"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 flex-shrink-0">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600 flex-shrink-0">
                     <value.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div>
@@ -146,7 +147,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <Button asChild size="lg" className="gap-2">
+            <Button asChild size="lg" className="gap-2 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white">
               <Link href="/about">
                 Learn More About Us
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -166,9 +167,9 @@ export function AboutSection() {
           {highlights.map((item) => (
             <div
               key={item.label}
-              className="relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-100 text-center group hover:shadow-lg transition-all duration-300"
+              className="relative bg-white p-6 rounded-2xl border border-blue-100 text-center group hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600 mx-auto mb-3 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 text-white mx-auto mb-3 group-hover:scale-110 transition-transform">
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-1">{item.number}</div>

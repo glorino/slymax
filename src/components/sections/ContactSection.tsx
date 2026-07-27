@@ -88,7 +88,10 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50" aria-labelledby="contact-heading">
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50" aria-labelledby="contact-heading">
+      <div className="absolute top-0 left-0 w-80 h-80 bg-violet-200 rounded-full -translate-x-1/3 -translate-y-1/3 opacity-30" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-200 rounded-full translate-x-1/4 translate-y-1/4 opacity-25" aria-hidden="true" />
+
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <motion.div
@@ -97,7 +100,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-violet-100 text-violet-700 text-sm font-medium mb-4">
               Get In Touch
             </span>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -116,16 +119,16 @@ export function ContactSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
-                  className="flex items-start gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:shadow-md transition-shadow"
+                  className="flex items-start gap-4 p-4 bg-white rounded-xl border border-violet-100 hover:shadow-md transition-shadow"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 shrink-0">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100 text-violet-600 shrink-0">
                     <item.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">{item.title}</h3>
                     <p className="text-gray-600 mt-1 whitespace-pre-line">
                       {item.link ? (
-                        <a href={item.link} className="hover:text-primary-600 transition-colors">
+                        <a href={item.link} className="hover:text-violet-600 transition-colors">
                           {item.details}
                         </a>
                       ) : (
@@ -151,7 +154,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm" noValidate>
+            <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-8 rounded-2xl border border-violet-100 shadow-sm" noValidate>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -164,7 +167,7 @@ export function ContactSection() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors"
                     placeholder="John Doe"
                     disabled={status === "submitting"}
                   />
@@ -181,7 +184,7 @@ export function ContactSection() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors"
                     placeholder="john@company.com"
                     disabled={status === "submitting"}
                   />
@@ -198,7 +201,7 @@ export function ContactSection() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors"
                     placeholder="+234 803 123 4567"
                     disabled={status === "submitting"}
                   />
@@ -214,7 +217,7 @@ export function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={(e) => setFormData({...formData, company: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors"
                     placeholder="Your Company Name"
                     disabled={status === "submitting"}
                   />
@@ -230,7 +233,7 @@ export function ContactSection() {
                     required
                     value={formData.service}
                     onChange={(e) => setFormData({...formData, service: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors appearance-none bg-white"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors appearance-none bg-white"
                     disabled={status === "submitting"}
                   >
                     <option value="">Select a service...</option>
@@ -253,14 +256,14 @@ export function ContactSection() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors resize-none"
                     placeholder="Describe your project requirements, timeline, budget range, and any specific needs..."
                     disabled={status === "submitting"}
                   />
                 </div>
               </div>
 
-              <Button type="submit" className="w-full mt-6 py-3" size="lg" disabled={status === "submitting"}>
+              <Button type="submit" className="w-full mt-6 py-3 bg-gradient-to-r from-violet-500 to-violet-700 hover:from-violet-600 hover:to-violet-800 text-white" size="lg" disabled={status === "submitting"}>
                 {status === "submitting" ? (
                   <>
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" aria-hidden="true" />
@@ -288,8 +291,8 @@ export function ContactSection() {
               )}
 
               <p className="mt-4 text-center text-xs text-gray-500">
-                By submitting, you agree to our <a href="/privacy" className="text-primary-600 hover:underline">Privacy Policy</a> 
-                and <a href="/terms" className="text-primary-600 hover:underline">Terms of Service</a>.
+                By submitting, you agree to our <a href="/privacy" className="text-violet-600 hover:underline">Privacy Policy</a> 
+                and <a href="/terms" className="text-violet-600 hover:underline">Terms of Service</a>.
               </p>
             </form>
           </motion.div>

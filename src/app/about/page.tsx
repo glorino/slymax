@@ -96,8 +96,10 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-gray-50 via-white to-gray-50">
+      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-blue-100 via-blue-50 to-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-300 rounded-full -translate-y-1/3 translate-x-1/3 opacity-20" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-300 rounded-full translate-y-1/3 -translate-x-1/4 opacity-20" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -105,13 +107,13 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
               About Slymax Nigeria Limited
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               50+ Years of Building
               <br />
-              <span className="text-primary-600">Excellence Across Nigeria</span>
+              <span className="text-blue-600">Excellence Across Nigeria</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               From a modest construction firm in Owerri to one of Nigeria's leading integrated industrial solutions providers.
@@ -122,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 lg:py-32 bg-white" aria-labelledby="mission-heading">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-blue-50/30 to-white" aria-labelledby="mission-heading">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -131,16 +133,16 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
                 Our Purpose
               </span>
               <h2 id="mission-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
                 Mission, Vision & Core Values
               </h2>
               <div className="space-y-6">
-                <div className="p-6 bg-primary-50 rounded-2xl border border-primary-100">
+                <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl border border-blue-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Target className="h-6 w-6 text-primary-600" aria-hidden="true" />
+                    <Target className="h-6 w-6 text-blue-600" aria-hidden="true" />
                     Our Mission
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -148,9 +150,9 @@ export default function AboutPage() {
                     our clients' success, while maintaining the highest standards of safety, quality, and environmental responsibility.
                   </p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                <div className="p-6 bg-gradient-to-br from-cyan-50 to-cyan-100/50 rounded-2xl border border-cyan-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Lightbulb className="h-6 w-6 text-primary-600" aria-hidden="true" />
+                    <Lightbulb className="h-6 w-6 text-cyan-600" aria-hidden="true" />
                     Our Vision
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -175,9 +177,9 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
-                  className="p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow"
+                  className="p-6 bg-white rounded-2xl border border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600 mb-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 text-white mb-4">
                     <value.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
@@ -190,10 +192,12 @@ export default function AboutPage() {
       </section>
 
       {/* Company History Timeline */}
-      <section className="py-20 lg:py-32 bg-gray-50" aria-labelledby="history-heading">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50 relative overflow-hidden" aria-labelledby="history-heading">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-25" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-60 h-60 bg-purple-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4">
               Our Journey
             </span>
             <h2 id="history-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -205,7 +209,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2 hidden lg:block" aria-hidden="true" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-indigo-200 transform -translate-x-1/2 hidden lg:block" aria-hidden="true" />
             <div className="space-y-8">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -217,8 +221,8 @@ export default function AboutPage() {
                   className="relative flex lg:flex-row"
                 >
                   <div className={index % 2 === 0 ? "lg:w-1/2 lg:pr-12 lg:text-right" : "lg:w-1/2 lg:pl-12 lg:ml-auto"}>
-                    <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative">
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm lg:absolute lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-1/2 lg:ml-0">
+                    <div className="bg-white p-6 rounded-2xl border border-indigo-100 shadow-sm hover:shadow-md transition-shadow relative">
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center font-bold text-sm lg:absolute lg:left-auto lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-1/2 lg:ml-0">
                         {milestone.year}
                       </div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{milestone.title}</h3>
@@ -227,7 +231,7 @@ export default function AboutPage() {
                   </div>
                   <div className={index % 2 === 0 ? "lg:w-1/2" : "lg:w-1/2"}>
                     <div className="lg:hidden text-center my-4">
-                      <div className="inline-block w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm">
+                      <div className="inline-block w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center font-bold text-sm">
                         {milestone.year}
                       </div>
                     </div>
@@ -240,10 +244,12 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 lg:py-32 bg-white" aria-labelledby="certifications-heading">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" aria-labelledby="certifications-heading">
+        <div className="absolute top-0 left-0 w-80 h-80 bg-amber-200 rounded-full -translate-x-1/4 -translate-y-1/4 opacity-25" aria-hidden="true" />
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-200 rounded-full translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
               Standards & Accreditations
             </span>
             <h2 id="certifications-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
@@ -262,9 +268,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
-                className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow group"
+                className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:shadow-amber-50 transition-all group"
               >
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary-100 text-primary-600 mx-auto mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 text-white mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <CheckCircle className="h-7 w-7" aria-hidden="true" />
                 </div>
                 <h3 className="text-center font-medium text-gray-900 text-sm leading-relaxed">{cert}</h3>
@@ -275,10 +281,12 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 lg:py-32 bg-gray-50" aria-labelledby="leadership-heading">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50 relative overflow-hidden" aria-labelledby="leadership-heading">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-teal-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-25" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
               Leadership Team
             </span>
             <h2 id="leadership-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
@@ -297,9 +305,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl border border-teal-100 overflow-hidden hover:shadow-xl transition-all"
               >
-                <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-teal-100 to-emerald-200 flex items-center justify-center relative overflow-hidden">
                   <img 
                     src={member.image} 
                     alt={member.name}
@@ -307,12 +315,12 @@ export default function AboutPage() {
                     onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.classList.add('opacity-100'); }}
                   />
                   <div className="absolute inset-0 flex items-center justify-center z-10">
-                    <Building2 className="h-16 w-16 text-gray-300" aria-hidden="true" />
+                    <Building2 className="h-16 w-16 text-teal-300" aria-hidden="true" />
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-primary-600 text-sm font-medium mb-3">{member.role}</p>
+                  <p className="text-teal-600 text-sm font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>
@@ -322,8 +330,10 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-900 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/3 translate-x-1/3" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full translate-y-1/4 -translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -335,12 +345,12 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               Ready to Partner with Industry Leaders?
             </h2>
-            <p className="text-lg text-primary-100 leading-relaxed mb-8">
+            <p className="text-lg text-blue-100 leading-relaxed mb-8">
               Join hundreds of satisfied clients who trust Slymax Nigeria Limited for their construction, 
               industrial equipment, and material supply needs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-primary-600 hover:bg-primary-50 shadow-lg hover:shadow-xl" variant="default">
+              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl" variant="default">
                 <Link href="/contact">
                   Get a Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

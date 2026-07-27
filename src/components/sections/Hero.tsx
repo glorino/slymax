@@ -2,10 +2,22 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle, ArrowRight, Shield, Award, Users, Clock, HardHat, Building2, Truck, Flame, Wrench, Loader } from "lucide-react"
+import { useState, useEffect, useCallback } from "react"
+import { CheckCircle, ArrowRight, Shield, Award, Users, Clock, HardHat, Building2, Truck, Flame, Wrench, Loader, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+
+const heroImages = [
+  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85", alt: "Construction site with heavy machinery and workers" },
+  { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=85", alt: "Construction workers on site" },
+  { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=85", alt: "Construction site overview" },
+  { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=85", alt: "Steel structure framework" },
+  { src: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=85", alt: "Heavy equipment on construction site" },
+  { src: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1920&q=85", alt: "Industrial jib crane in warehouse facility" },
+  { src: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1920&q=85", alt: "Industrial equipment and machinery" },
+  { src: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=1920&q=85", alt: "Modern construction project" },
+]
 
 const stats = [
   { value: "500+", label: "Projects Completed", icon: Building2 },
@@ -24,22 +36,90 @@ const serviceHighlights = [
 ]
 
 export function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+  }, [])
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+  }, [])
+
+  const goToSlide = useCallback((index: number) => {
+    setCurrentSlide(index)
+  }, [])
+
+  useEffect(() => {
+    if (isPaused) return
+    const interval = setInterval(nextSlide, 5000)
+    return () => clearInterval(interval)
+  }, [isPaused, nextSlide])
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Full background - jib crane in warehouse */}
+    <section 
+      className="relative min-h-screen flex items-center overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* Background Slides */}
       <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1920&q=85"
-          alt="Industrial jib crane in warehouse facility"
-          fill
-          className="object-cover"
-          priority
-        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={heroImages[currentSlide].src}
+              alt={heroImages[currentSlide].alt}
+              fill
+              className="object-cover"
+              priority={currentSlide === 0}
+            />
+          </motion.div>
+        </AnimatePresence>
         {/* Heavy dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gray-900/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-gray-900/30" />
+        <div className="absolute inset-0 bg-gray-900/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-gray-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-900/20" />
       </div>
+
+      {/* Slide Controls */}
+      <div className="absolute bottom-24 left-0 right-0 z-20 flex justify-center gap-2 px-4">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? "w-8 bg-yellow-400" 
+                : "w-4 bg-white/40 hover:bg-white/60"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Previous/Next Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white hover:bg-white/30 transition-all hidden md:flex items-center justify-center"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-5 w-5" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white hover:bg-white/30 transition-all hidden md:flex items-center justify-center"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-5 w-5" />
+      </button>
 
       <Container className="relative z-10 py-20 lg:py-32">
         <div className="max-w-3xl">

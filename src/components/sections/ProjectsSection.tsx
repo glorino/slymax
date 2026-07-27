@@ -74,14 +74,17 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section className="py-20 lg:py-32 bg-white relative" aria-labelledby="projects-heading">
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50" aria-labelledby="projects-heading">
+      <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-30" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-25" aria-hidden="true" />
+
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4"
+            className="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4"
           >
             Project Portfolio
           </motion.span>
@@ -94,7 +97,7 @@ export function ProjectsSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
           >
             Delivering Excellence{" "}
-            <span className="text-primary-600">Across Nigeria</span>
+            <span className="text-emerald-600">Across Nigeria</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -117,7 +120,7 @@ export function ProjectsSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <Card className="h-full border-0 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden group">
+              <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden group">
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
                   <Image
@@ -139,14 +142,14 @@ export function ProjectsSection() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.description}</p>
                   
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <div className="text-lg font-bold text-primary-600">{project.value}</div>
-                    <Link href="/contact" className="flex items-center gap-1 text-sm text-primary-600 hover:text-primary-700 font-medium">
+                    <div className="text-lg font-bold text-emerald-600">{project.value}</div>
+                    <Link href="/contact" className="flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium">
                       Discuss Similar
                       <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                     </Link>
@@ -158,7 +161,7 @@ export function ProjectsSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild variant="outline" size="lg" className="px-10 py-3">
+          <Button asChild size="lg" className="px-10 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white">
             <Link href="/projects">
               View All Projects
               <ExternalLink className="ml-2 h-5 w-5" aria-hidden="true" />
