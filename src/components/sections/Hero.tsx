@@ -17,6 +17,24 @@ const heroImages = [
   { src: "https://images.unsplash.com/photo-1580894742597-87bc870ddb17?w=1920&q=85", alt: "Telecom mast installation work" },
 ]
 
+const captions = [
+  { text: "Telecom & Industrial Solutions", highlight: "Telecom & Industrial Solutions" },
+  { text: "Building Nigeria's Future", highlight: "Building Nigeria's Future" },
+  { text: "Real Estate Development", highlight: "Real Estate Development" },
+  { text: "Oil & Gas Expertise", highlight: "Oil & Gas Expertise" },
+  { text: "Reliable Haulage Services", highlight: "Reliable Haulage Services" },
+  { text: "Trusted Since 2000", highlight: "Trusted Since 2000" },
+]
+
+const captionsSubtext = [
+  "End-to-end solutions across Nigeria with proven expertise.",
+  "Quality craftsmanship and reliable project delivery nationwide.",
+  "Premium land development, property leasing & civil works.",
+  "Gas equipment, pipeline services & safety systems.",
+  "Aggregates, sand, laterite & heavy equipment transport.",
+  "Over 500 successful projects and counting.",
+]
+
 const stats = [
   { value: "500+", label: "Projects Completed", icon: Building2 },
   { value: "50+", label: "Years Experience", icon: Award },
@@ -34,6 +52,7 @@ const serviceHighlights = [
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentCaption, setCurrentCaption] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
 
   const nextSlide = useCallback(() => {
@@ -53,6 +72,14 @@ export function Hero() {
     const interval = setInterval(nextSlide, 5000)
     return () => clearInterval(interval)
   }, [isPaused, nextSlide])
+
+  useEffect(() => {
+    if (isPaused) return
+    const interval = setInterval(() => {
+      setCurrentCaption((prev) => (prev + 1) % captions.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [isPaused])
 
   return (
     <section 
@@ -126,26 +153,42 @@ export function Hero() {
             <span>Telecom | Real Estate | Oil & Gas | Haulage | Building</span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6"
-          >
-            Your Trusted Partner in{" "}
-            <span className="text-sky-400">
-              Telecom & Industrial Solutions
-            </span>
-          </motion.h1>
+          <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
+            <span>Your Trusted Partner in </span>
+            <div className="relative inline-block overflow-hidden align-bottom h-[1.2em] min-w-[200px]">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentCaption}
+                  initial={{ y: 60, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -60, opacity: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="absolute left-0 bottom-0 text-sky-400 whitespace-nowrap"
+                >
+                  {captions[currentCaption].highlight}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+          </div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl"
+            className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl min-h-[3.5rem]"
           >
-            From telecommunication services to real estate development, oil & gas to haulage 
-            — we deliver end-to-end industrial solutions across Nigeria with proven expertise.
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentCaption}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="block"
+              >
+                {captionsSubtext[currentCaption]}
+              </motion.span>
+            </AnimatePresence>
           </motion.p>
 
           <motion.div
