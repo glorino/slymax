@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 
 const companyInfo = {
   name: "Slymax Nigeria Limited",
-  phone: "+234 803 408 8880",
+  phone: "08034088880",
   email: "info@slymaxnig.com",
 }
 

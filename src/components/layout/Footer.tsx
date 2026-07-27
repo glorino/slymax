@@ -11,10 +11,10 @@ import {
 const companyInfo = {
   name: "Slymax Nigeria Limited",
   tagline: "Reliable indigenous company in the telecommunication and industrial sector in Nigeria.",
-  address: "Plot 82 First East Circular Road, Benin City, Edo State, Nigeria",
+  address: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
   email: "info@slymaxnig.com",
-  phone: "+234 803 408 8880",
-  phones: ["+234 803 408 8880", "+234 802 301 9197", "+234 806 214 9620", "+234 703 394 2428"],
+  phone: "08034088880",
+  phones: ["08034088880", "08055559758", "08023019197"],
 }
 
 const quickLinks = [

@@ -10,13 +10,13 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Head Office",
-    details: "Plot 82 First East Circular Road, Benin City, Edo State, Nigeria",
+    details: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
     link: null,
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: "+234 803 408 8880",
+    details: "08034088880",
     link: "tel:+2348034088880",
   },
   {

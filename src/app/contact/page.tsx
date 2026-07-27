@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    details: "+234 803 408 8880\n+234 805 555 9758\n+234 802 301 9197",
+    details: "08034088880\n08055559758\n08023019197",
     link: "tel:+2348034088880",
   },
   {
@@ -39,7 +39,7 @@ const contactInfo = [
 ]
 
 const altContactMethods = [
-  { icon: Phone, title: "Call Sales", desc: "Speak with our sales engineers", action: "Call Now", href: "tel:+2348034088880", color: "bg-green-50 text-green-600" },
+  { icon: Phone, title: "Call Us", desc: "Speak with our team", action: "Call Now", href: "tel:+2348034088880", color: "bg-green-50 text-green-600" },
   { icon: Mail, title: "Email Us", desc: "Detailed inquiries & documents", action: "Email Us", href: "mailto:info@slymaxnig.com", color: "bg-blue-50 text-blue-600" },
   { icon: MapPin, title: "Visit Office", desc: "Schedule a site visit or meeting", action: "Get Directions", href: "https://maps.google.com/?q=21+Philip+Omosigho+Street+Benin+City+Edo+State", color: "bg-purple-50 text-purple-600" },
 ]
