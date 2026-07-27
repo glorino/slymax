@@ -63,7 +63,7 @@ export function Header() {
               href="/"
               className={cn(
                 "flex items-center gap-3 font-bold transition-colors",
-                showWhiteText ? "text-white hover:text-yellow-300" : "text-gray-900 hover:text-primary-700"
+                showWhiteText ? "text-white hover:text-sky-300" : "text-gray-900 hover:text-primary-700"
               )}
               aria-label="Slymax Nigeria Limited - Home"
             >
@@ -89,11 +89,11 @@ export function Header() {
                       key={item.name}
                       href={item.href}
                       className={cn(
-                        "text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-yellow-400 after:transition-all hover:after:w-full",
+                        "text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-sky-400 after:transition-all hover:after:w-full",
                         isActive
-                          ? "text-yellow-400"
+                          ? "text-sky-400"
                           : showWhiteText
-                            ? "text-white hover:text-yellow-300"
+                            ? "text-white hover:text-sky-300"
                             : "text-gray-700 hover:text-primary-600"
                       )}
                       aria-current={isActive ? "page" : undefined}
@@ -109,9 +109,9 @@ export function Header() {
                       className={cn(
                         "flex items-center gap-1.5 text-sm font-medium transition-colors",
                         isActive
-                          ? "text-yellow-400"
+                          ? "text-sky-400"
                           : showWhiteText
-                            ? "text-white hover:text-yellow-300"
+                            ? "text-white hover:text-sky-300"
                             : "text-gray-700 hover:text-primary-600"
                       )}
                       onMouseEnter={() => setOpenDropdown(item.name)}
@@ -155,7 +155,7 @@ export function Header() {
               })}
 
               <Link href="/contact">
-                <Button size="sm" className="gap-2 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white border-0">
+                <Button size="sm" className="gap-2 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white border-0">
                   <span className="hidden sm:inline">Get Quote</span>
                   <Phone className="h-4 w-4" aria-hidden="true" />
                 </Button>

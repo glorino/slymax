@@ -54,22 +54,22 @@ export function Footer() {
 
             <div className="space-y-4 pt-4 border-t border-gray-800">
               <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="h-5 w-5 text-orange-500 shrink-0" aria-hidden="true" />
+                <MapPin className="h-5 w-5 text-blue-500 shrink-0" aria-hidden="true" />
                 <address className="not-italic text-sm">{companyInfo.address}</address>
               </div>
-              <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <Mail className="h-5 w-5 text-orange-500 shrink-0" aria-hidden="true" />
+              <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-3 text-gray-400 hover:text-blue-500 transition-colors">
+                <Mail className="h-5 w-5 text-blue-500 shrink-0" aria-hidden="true" />
                 <span className="text-sm">{companyInfo.email}</span>
               </a>
-              <a href={`tel:${companyInfo.phone}`} className="flex items-center gap-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <Phone className="h-5 w-5 text-orange-500 shrink-0" aria-hidden="true" />
+              <a href={`tel:${companyInfo.phone}`} className="flex items-center gap-3 text-gray-400 hover:text-blue-500 transition-colors">
+                <Phone className="h-5 w-5 text-blue-500 shrink-0" aria-hidden="true" />
                 <span className="text-sm">{companyInfo.phones.join(" | ")}</span>
               </a>
             </div>
 
             <div className="flex items-center gap-4 pt-4 border-t border-gray-800">
               {socialLinks.map((social) => (
-                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-orange-600 hover:text-white transition-all duration-300" aria-label={social.name}>
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300" aria-label={social.name}>
                   <social.icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
@@ -82,7 +82,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="flex items-center gap-2 text-gray-400 hover:text-orange-500 transition-colors">
+                    <Link href={link.href} className="flex items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors">
                       <ChevronRight className="h-4 w-4" aria-hidden="true" />
                       {link.name}
                     </Link>
@@ -98,7 +98,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.name}>
-                    <Link href={service.href} className="flex items-center gap-2 text-gray-400 hover:text-orange-500 transition-colors">
+                    <Link href={service.href} className="flex items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors">
                       <service.icon className="h-4 w-4" aria-hidden="true" />
                       {service.name}
                     </Link>
@@ -129,8 +129,8 @@ export function Footer() {
               &copy; {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-500">
-              <Link href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-orange-500 transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-blue-500 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-blue-500 transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

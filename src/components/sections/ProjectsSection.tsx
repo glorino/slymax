@@ -51,7 +51,7 @@ const projects = [
     value: "₦250M",
     description: "Large-scale haulage of aggregates, granite, sand and laterite for road construction projects.",
     icon: Truck,
-    gradient: "from-yellow-500 to-amber-700",
+    gradient: "from-blue-500 to-blue-700",
   },
   {
     id: 5,

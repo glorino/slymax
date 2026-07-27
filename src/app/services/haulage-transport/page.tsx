@@ -46,7 +46,7 @@ export default function HaulageTransportPage() {
     <>
       <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-80 h-80 bg-yellow-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-50 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -54,20 +54,20 @@ export default function HaulageTransportPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
                 Haulage & Transport
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                 Reliable Haulage
                 <br />
-                <span className="text-yellow-600">& Transport Solutions</span>
+                <span className="text-blue-600">& Transport Solutions</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
                 Haulage of aggregates (granites), sharp sand, laterite materials, and transport services for 
                 cars, trucks and heavy equipment. Nationwide coverage with modern fleet.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="gap-2 bg-yellow-600 hover:bg-yellow-700 text-white">
+                <Button asChild size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white">
                   <Link href="/contact">
                     Get a Quote
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -85,8 +85,8 @@ export default function HaulageTransportPage() {
               className="grid grid-cols-2 gap-4"
             >
               {fleetStats.map((stat) => (
-                <div key={stat.label} className="bg-white p-6 rounded-2xl border border-yellow-100 text-center shadow-sm">
-                  <div className="text-3xl sm:text-4xl font-bold text-yellow-600 mb-1">{stat.value}</div>
+                <div key={stat.label} className="bg-white p-6 rounded-2xl border border-blue-100 text-center shadow-sm">
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -98,7 +98,7 @@ export default function HaulageTransportPage() {
       <section className="py-20 lg:py-32 bg-white" aria-labelledby="services-heading">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-4">
               Our Haulage Services
             </span>
             <h2 id="services-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -115,7 +115,7 @@ export default function HaulageTransportPage() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
                 <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl transition-all overflow-hidden">
-                  <div className="p-6 bg-gradient-to-r from-yellow-500 to-amber-600">
+                  <div className="p-6 bg-gradient-to-r from-blue-500 to-blue-700">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
                       <service.icon className="h-7 w-7 text-white" aria-hidden="true" />
                     </div>
@@ -126,12 +126,12 @@ export default function HaulageTransportPage() {
                     <ul className="space-y-2 mb-6" role="list">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-yellow-600 flex-shrink-0" aria-hidden="true" />
+                          <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" aria-hidden="true" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Button variant="ghost" className="w-full justify-start px-0 text-yellow-600 hover:text-yellow-700" asChild>
+                    <Button variant="ghost" className="w-full justify-start px-0 text-blue-600 hover:text-blue-700" asChild>
                       <Link href="/contact">
                         Request Transport Quote
                         <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
@@ -145,7 +145,7 @@ export default function HaulageTransportPage() {
         </Container>
       </section>
 
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-700 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <motion.div
@@ -158,10 +158,10 @@ export default function HaulageTransportPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               Need Reliable Transport for Your Project?
             </h2>
-            <p className="text-lg text-yellow-100 leading-relaxed mb-8">
+            <p className="text-lg text-blue-100 leading-relaxed mb-8">
               From aggregate haulage to heavy equipment transport, we have the fleet and expertise to deliver.
             </p>
-            <Button asChild size="xl" className="px-10 py-4 bg-white text-yellow-600 hover:bg-yellow-50 shadow-lg" variant="default">
+            <Button asChild size="xl" className="px-10 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg" variant="default">
               <Link href="/contact">
                 Get a Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

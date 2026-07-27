@@ -44,9 +44,9 @@ const services = [
     icon: Truck,
     description: "Haulage of aggregates, sharp sand, laterite materials, and transport for cars, trucks and heavy equipment.",
     features: ["Aggregate Haulage", "Sand & Laterite", "Equipment Transport", "Fleet Services"],
-    gradient: "from-yellow-600 to-amber-800",
-    bgCard: "bg-yellow-50",
-    iconColor: "text-yellow-600",
+    gradient: "from-blue-600 to-blue-800",
+    bgCard: "bg-blue-50",
+    iconColor: "text-blue-600",
   },
   {
     name: "Building & Construction",
@@ -63,8 +63,8 @@ const services = [
 export function ServicesSection() {
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-white to-slate-50" aria-labelledby="services-heading">
-      <div className="absolute top-0 left-0 w-72 h-72 bg-orange-100 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-40 blur-3xl" aria-hidden="true" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-100 rounded-full translate-x-1/3 translate-y-1/3 opacity-30 blur-3xl" aria-hidden="true" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-50 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-40 blur-3xl" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-50 rounded-full translate-x-1/3 translate-y-1/3 opacity-30 blur-3xl" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -72,7 +72,7 @@ export function ServicesSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-4"
+            className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-4"
           >
             Our Comprehensive Solutions
           </motion.span>
@@ -85,7 +85,7 @@ export function ServicesSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
           >
             Services Tailored to{" "}
-            <span className="text-orange-600">Your Project Needs</span>
+            <span className="text-blue-600">Your Project Needs</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ export function ServicesSection() {
                     <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${service.gradient} text-white shadow-md mb-4`}>
                       <service.icon className="h-7 w-7" aria-hidden="true" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.description}</p>
@@ -127,7 +127,7 @@ export function ServicesSection() {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center text-orange-600 font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                    <div className="flex items-center text-blue-600 font-medium text-sm group-hover:gap-3 gap-2 transition-all">
                       Learn More
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                     </div>
@@ -139,7 +139,7 @@ export function ServicesSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg" className="px-10 py-3 bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 text-white">
+          <Button asChild size="lg" className="px-10 py-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white">
             <Link href="/contact">
               Request a Quote for Your Project
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

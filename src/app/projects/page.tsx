@@ -30,7 +30,7 @@ const projects = [
   {
     id: 4, title: "Aggregate Haulage - Federal Roads", category: "Haulage & Transport", location: "FCT Abuja", year: "2023", duration: "12 months", value: "₦250M",
     description: "Large-scale haulage of aggregates, granite, sand and laterite for federal road construction projects.",
-    icon: Truck, gradient: "from-yellow-500 to-amber-600",
+    icon: Truck, gradient: "from-blue-500 to-blue-700",
     features: ["Granite Haulage (50,000T)", "Sand Transport", "Laterite Supply", "Fleet of 30+ Trucks", "GPS Tracking", "24/7 Operations"],
   },
   {

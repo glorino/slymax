@@ -91,7 +91,7 @@ export function Hero() {
             onClick={() => goToSlide(index)}
             className={`h-1.5 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? "w-8 bg-yellow-400" 
+                ? "w-8 bg-sky-400" 
                 : "w-4 bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -133,7 +133,7 @@ export function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6"
           >
             Your Trusted Partner in{" "}
-            <span className="text-yellow-400">
+            <span className="text-sky-400">
               Telecom & Industrial Solutions
             </span>
           </motion.h1>
@@ -154,7 +154,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
-            <Button asChild size="lg" className="gap-2 px-8 py-4 text-base bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white border-0 shadow-lg shadow-orange-500/25">
+            <Button asChild size="lg" className="gap-2 px-8 py-4 text-base bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white border-0 shadow-lg shadow-blue-500/25">
               <Link href="/contact">
                 Get a Free Quote
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -182,7 +182,7 @@ export function Hero() {
                 transition={{ delay: 0.7 + index * 0.08 }}
                 className="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-white text-sm"
               >
-                <service.icon className="h-4 w-4 text-yellow-400" aria-hidden="true" />
+                <service.icon className="h-4 w-4 text-sky-400" aria-hidden="true" />
                 {service.label}
               </motion.div>
             ))}
@@ -199,7 +199,7 @@ export function Hero() {
                 key={stat.label}
                 className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center"
               >
-                <stat.icon className="h-5 w-5 text-yellow-400 mx-auto mb-2" aria-hidden="true" />
+                <stat.icon className="h-5 w-5 text-sky-400 mx-auto mb-2" aria-hidden="true" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-xs text-gray-300">{stat.label}</div>
               </div>

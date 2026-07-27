@@ -208,10 +208,10 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 lg:py-32 bg-white relative overflow-hidden" aria-labelledby="clients-heading">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-amber-100 rounded-full -translate-x-1/4 -translate-y-1/4 opacity-30 blur-3xl" aria-hidden="true" />
+        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-50 rounded-full -translate-x-1/4 -translate-y-1/4 opacity-30 blur-3xl" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-4">
               Our Clients
             </span>
             <h2 id="clients-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
@@ -226,9 +226,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
-                className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:shadow-amber-50 transition-all text-center"
+                className="bg-white p-6 rounded-xl border border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all text-center"
               >
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 text-white mx-auto mb-4">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-white mx-auto mb-4">
                   <Building2 className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <p className="font-semibold text-gray-900">{client}</p>
