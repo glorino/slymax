@@ -1,74 +1,79 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, ArrowRight, ExternalLink } from "lucide-react"
+import { MapPin, ArrowRight, ExternalLink, Signal, Home, Flame, Truck, Hammer } from "lucide-react"
 import { motion } from "framer-motion"
 
 const projects = [
   {
     id: 1,
-    title: "Industrial Complex - Port Harcourt",
-    category: "Construction",
-    location: "Rivers State",
-    year: "2023",
-    value: "₦2.4B",
-    description: "Complete EPC of 50,000 sqm industrial facility including warehouses, offices, and infrastructure.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+    title: "Telecom Mast Construction - Edo State",
+    category: "Telecommunication",
+    location: "Edo State",
+    year: "2024",
+    value: "₦180M",
+    description: "Construction and maintenance of multiple telecommunication masts for major network operators.",
+    icon: Signal,
+    gradient: "from-blue-500 to-blue-700",
   },
   {
     id: 2,
-    title: "Steel Bridge - Onitsha Crossing",
-    category: "Construction",
-    location: "Anambra State",
+    title: "Estate Development - Benin City",
+    category: "Real Estate",
+    location: "Edo State",
     year: "2023",
-    value: "₦850M",
-    description: "Design, fabrication, and erection of 200m span steel truss bridge over Niger River tributary.",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
+    value: "₦350M",
+    description: "Real estate development project including residential buildings and infrastructure.",
+    icon: Home,
+    gradient: "from-emerald-500 to-emerald-700",
   },
   {
     id: 3,
-    title: "Refinery Scaffolding - Warri",
-    category: "Scaffold Material",
-    location: "Delta State",
+    title: "Gas Pipeline Installation - Rivers",
+    category: "Oil and Gas",
+    location: "Rivers State",
     year: "2024",
-    value: "₦320M",
-    description: "Full scaffolding system supply, erection, and inspection for refinery turnaround maintenance.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80",
+    value: "₦420M",
+    description: "Gas regulation station equipment supply and pipeline installation services.",
+    icon: Flame,
+    gradient: "from-red-500 to-red-700",
   },
   {
     id: 4,
-    title: "Fire Protection - Lagos Mega Mall",
-    category: "Fire Equipment",
-    location: "Lagos State",
+    title: "Aggregate Haulage - Federal Roads",
+    category: "Haulage & Transport",
+    location: "FCT Abuja",
     year: "2023",
-    value: "₦450M",
-    description: "Complete fire suppression, detection, and alarm system for 120,000 sqm shopping complex.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
+    value: "₦250M",
+    description: "Large-scale haulage of aggregates, granite, sand and laterite for road construction projects.",
+    icon: Truck,
+    gradient: "from-yellow-500 to-amber-700",
   },
   {
     id: 5,
-    title: "Heavy Equipment Fleet - Abuja Roads",
-    category: "Heavy Equipment Leasing",
-    location: "FCT Abuja",
+    title: "Fibre Optics Laying - South South",
+    category: "Telecommunication",
+    location: "Delta State",
     year: "2024",
-    value: "₦1.2B",
-    description: "Long-term lease of earthmoving fleet for federal highway construction project.",
-    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
+    value: "₦320M",
+    description: "Fibre optics cable laying and installation across multiple sites in the South South region.",
+    icon: Signal,
+    gradient: "from-blue-500 to-blue-700",
   },
   {
     id: 6,
-    title: "Jib Crane Installation - Kano Factory",
-    category: "Jib Crane Supply",
-    location: "Kano State",
+    title: "Commercial Building - Lagos",
+    category: "Building & Construction",
+    location: "Lagos State",
     year: "2023",
-    value: "₦180M",
-    description: "Design, supply, and installation of 12 wall-mounted jib cranes for manufacturing facility.",
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80",
+    value: "₦500M",
+    description: "General building construction of commercial complex including offices and retail spaces.",
+    icon: Hammer,
+    gradient: "from-purple-500 to-purple-700",
   },
 ]
 
@@ -106,8 +111,8 @@ export function ProjectsSection() {
             transition={{ delay: 0.2 }}
             className="text-lg text-gray-600 leading-relaxed"
           >
-            A showcase of landmark projects demonstrating our capability across construction, 
-            industrial equipment, and material supply sectors.
+            A showcase of landmark projects demonstrating our capability across telecom, 
+            real estate, oil & gas, and construction sectors.
           </motion.p>
         </div>
 
@@ -121,15 +126,8 @@ export function ProjectsSection() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <Card className="h-full border-0 bg-white shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden group">
-                {/* Image */}
-                <div className="relative h-56 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}>
+                  <project.icon className="h-20 w-20 text-white/30" aria-hidden="true" />
                   <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm text-gray-700">{project.category}</Badge>
                   </div>

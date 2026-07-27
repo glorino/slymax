@@ -1,81 +1,60 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle } from "lucide-react"
+import { ArrowRight, CheckCircle, Signal, Home, Flame, Truck, Hammer } from "lucide-react"
 import { motion } from "framer-motion"
 
 const services = [
   {
-    name: "Construction",
-    href: "/services/construction",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
-    description: "Complete building and civil engineering solutions from foundation to finish.",
-    features: ["Building Construction", "Road & Bridge Works", "Industrial Facilities"],
+    name: "Telecommunication Services",
+    href: "/services/telecommunication",
+    icon: Signal,
+    description: "Site maintenance, site construction, mast building, fibre optics laying, and aviation light installation.",
+    features: ["Site Maintenance", "Mast Construction", "Fibre Optics Laying", "Aviation Light Installation"],
     gradient: "from-blue-600 to-blue-800",
     bgCard: "bg-blue-50",
     iconColor: "text-blue-600",
   },
   {
-    name: "Steel Material Supply",
-    href: "/services/steel-material-supply",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80",
-    description: "Premium quality steel and structural materials for all construction needs.",
-    features: ["Structural Steel", "Reinforcement Bars", "Steel Pipes & Tubes"],
-    gradient: "from-gray-600 to-gray-800",
-    bgCard: "bg-gray-50",
-    iconColor: "text-gray-600",
+    name: "Real Estate",
+    href: "/services/real-estate",
+    icon: Home,
+    description: "Land development, property development, property leasing, and general civil works.",
+    features: ["Property Development", "Land Sales", "Property Leasing", "Civil Works"],
+    gradient: "from-emerald-600 to-emerald-800",
+    bgCard: "bg-emerald-50",
+    iconColor: "text-emerald-600",
   },
   {
-    name: "Scaffold Material",
-    href: "/services/scaffold-material",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
-    description: "Complete scaffolding systems for safe working at heights.",
-    features: ["Frame Scaffolding", "System Scaffolding", "Mobile Towers"],
-    gradient: "from-orange-500 to-orange-700",
-    bgCard: "bg-orange-50",
-    iconColor: "text-orange-600",
-  },
-  {
-    name: "Gas Equipment",
-    href: "/services/gas-equipment",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
-    description: "Industrial gas equipment, regulators, valves, and piping systems.",
-    features: ["Gas Regulators", "Valves & Fittings", "Safety Devices"],
-    gradient: "from-red-500 to-red-700",
+    name: "Oil and Gas",
+    href: "/services/oil-and-gas",
+    icon: Flame,
+    description: "Industrial gas equipment, pipeline services, and oil & gas support solutions.",
+    features: ["Gas Equipment", "Pipeline Services", "Oil & Gas Support", "Equipment Supply"],
+    gradient: "from-red-600 to-red-800",
     bgCard: "bg-red-50",
     iconColor: "text-red-600",
   },
   {
-    name: "Fire Equipment",
-    href: "/services/fire-equipment",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
-    description: "Comprehensive fire fighting and safety equipment.",
-    features: ["Fire Extinguishers", "Hydrant Systems", "Alarm Systems"],
-    gradient: "from-red-600 to-red-800",
-    bgCard: "bg-red-50",
-    iconColor: "text-red-700",
-  },
-  {
-    name: "Heavy Equipment Leasing",
-    href: "/services/heavy-equipment-leasing",
-    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
-    description: "Modern fleet of heavy machinery for rent with certified operators.",
-    features: ["Excavators & Loaders", "Mobile Cranes", "Bulldozers & Graders"],
-    gradient: "from-yellow-600 to-yellow-800",
+    name: "Haulage & Transport",
+    href: "/services/haulage-transport",
+    icon: Truck,
+    description: "Haulage of aggregates, sharp sand, laterite materials, and transport for cars, trucks and heavy equipment.",
+    features: ["Aggregate Haulage", "Sand & Laterite", "Equipment Transport", "Fleet Services"],
+    gradient: "from-yellow-600 to-amber-800",
     bgCard: "bg-yellow-50",
     iconColor: "text-yellow-600",
   },
   {
-    name: "Jib Crane Supply",
-    href: "/services/jib-crane-supply",
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80",
-    description: "Custom jib cranes and lifting solutions for workshops and warehouses.",
-    features: ["Wall-Mounted Jibs", "Floor-Mounted Jibs", "Custom Fabrication"],
-    gradient: "from-purple-500 to-purple-700",
+    name: "Building & Construction",
+    href: "/services/building-construction",
+    icon: Hammer,
+    description: "General building construction, civil works, and infrastructure development projects.",
+    features: ["Building Construction", "Civil Works", "Infrastructure", "Project Management"],
+    gradient: "from-purple-600 to-purple-800",
     bgCard: "bg-purple-50",
     iconColor: "text-purple-600",
   },
@@ -115,36 +94,30 @@ export function ServicesSection() {
             transition={{ delay: 0.2 }}
             className="text-lg text-gray-600 leading-relaxed"
           >
-            From groundbreaking construction to specialized equipment supply, we deliver quality, 
+            From telecommunication services to real estate development, we deliver quality, 
             safety, and reliability on every project across Nigeria.
           </motion.p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
               key={service.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.08, duration: 0.5 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <Link href={service.href}>
                 <Card className={`group h-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-0 ${service.bgCard}`}>
-                  {/* Image with overlay */}
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-70`} />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-white text-center px-4">{service.name}</h3>
-                    </div>
-                  </div>
+                  <div className={`h-2 bg-gradient-to-r ${service.gradient}`} />
                   <CardContent className="p-6">
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${service.gradient} text-white shadow-md mb-4`}>
+                      <service.icon className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                      {service.name}
+                    </h3>
                     <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.description}</p>
                     <ul className="space-y-2 mb-4" role="list">
                       {service.features.map((feature) => (

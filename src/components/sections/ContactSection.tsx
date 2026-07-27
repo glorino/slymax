@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Clock, Truck, HardHat, Building2, Flame, Wrench, Send, Loader2 } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Send, Loader2, Signal, Home, Flame, Truck, Hammer } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 
@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Head Office",
-    details: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
+    details: "Plot 82 First East Circular Road, Benin City, Edo State, Nigeria",
     link: null,
   },
   {
@@ -33,21 +33,13 @@ const contactInfo = [
   },
 ]
 
-const serviceIcons = {
-  construction: HardHat,
-  "steel-material-supply": Building2,
-  "scaffold-material": Wrench,
-  "gas-equipment": Flame,
-  "fire-equipment": Flame,
-  "heavy-equipment-leasing": Truck,
-  "jib-crane-supply": HardHat,
-}
-
-const services = Object.entries(serviceIcons).map(([key, Icon]) => ({
-  value: key,
-  label: key.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
-  icon: Icon,
-}))
+const serviceOptions = [
+  { value: "telecommunication", label: "Telecommunication Services", icon: Signal },
+  { value: "real-estate", label: "Real Estate", icon: Home },
+  { value: "oil-and-gas", label: "Oil and Gas", icon: Flame },
+  { value: "haulage-transport", label: "Haulage & Transport", icon: Truck },
+  { value: "building-construction", label: "Building & Construction", icon: Hammer },
+]
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -63,27 +55,9 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("submitting")
-    
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    // In production, replace with actual API call
-    // const response = await fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData)
-    // })
-    
     setStatus("success")
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      message: "",
-    })
-    
+    setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" })
     setTimeout(() => setStatus("idle"), 5000)
   }
 
@@ -104,7 +78,7 @@ export function ContactSection() {
               Get In Touch
             </span>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              Let's Discuss Your Project
+              Let&apos;s Discuss Your Project
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
               Ready to start your next project? Our team of experts is here to provide consultation, 
@@ -237,7 +211,7 @@ export function ContactSection() {
                     disabled={status === "submitting"}
                   >
                     <option value="">Select a service...</option>
-                    {services.map((service) => (
+                    {serviceOptions.map((service) => (
                       <option key={service.value} value={service.value}>
                         {service.label}
                       </option>
@@ -286,7 +260,7 @@ export function ContactSection() {
 
               {status === "success" && (
                 <p className="mt-4 text-center text-sm text-green-600" role="alert">
-                  Thank you! We'll get back to you within 2 business hours.
+                  Thank you! We will get back to you within 2 business hours.
                 </p>
               )}
 

@@ -3,99 +3,58 @@
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Shield, Award, Users, Building2, Target, Lightbulb, CheckCircle, ArrowRight, ChevronRight } from "lucide-react"
+import { Shield, Award, Users, Building2, Target, Lightbulb, CheckCircle, ArrowRight, Signal, Home, Flame, Truck, Hammer } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
-
 const values = [
-  {
-    icon: Shield,
-    title: "Safety First",
-    description: "Zero-incident safety culture with comprehensive HSE programs and continuous training for all personnel. We never compromise on safety.",
-  },
-  {
-    icon: Award,
-    title: "Quality Excellence",
-    description: "ISO 9001:2015 certified processes ensuring every project meets international quality standards. Precision in every detail.",
-  },
-  {
-    icon: Users,
-    title: "Client Partnership",
-    description: "Long-term relationships built on transparency, reliability, and exceeding client expectations. Your success is our success.",
-  },
-  {
-    icon: Building2,
-    title: "Innovation",
-    description: "Embracing modern construction methods and technology for efficient, sustainable solutions. Building for the future.",
-  },
-  {
-    icon: Target,
-    title: "Integrity",
-    description: "Ethical business practices, honest communication, and accountability in every interaction. We do what we say.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Expertise",
-    description: "200+ certified engineers, technicians, and project managers with decades of combined industry experience.",
-  },
+  { icon: Target, title: "Reliability", description: "Consistent delivery of quality services across all sectors." },
+  { icon: Award, title: "Quality Excellence", description: "ISO-standard processes ensuring international quality benchmarks." },
+  { icon: Users, title: "Client Partnership", description: "Long-term relationships built on transparency and trust." },
+  { icon: Signal, title: "Innovation", description: "Embracing modern technology for efficient, sustainable solutions." },
+  { icon: Building2, title: "Integrity", description: "Ethical practices, honest communication, and accountability." },
+  { icon: Lightbulb, title: "Expertise", description: "200+ certified professionals with decades of combined experience." },
 ]
 
 const milestones = [
-  { year: "1974", title: "Company Founded", description: "Established as a small construction firm in Owerri, Imo State" },
-  { year: "1985", title: "First Major Contract", description: "Awarded first federal government infrastructure project" },
-  { year: "1990", title: "Steel Division Launched", description: "Expanded into steel material supply and distribution nationwide" },
-  { year: "2000", title: "ISO Certification", description: "Achieved ISO 9001 quality management certification" },
-  { year: "2005", title: "Scaffolding Division", description: "Added scaffold material supply and rental services" },
-  { year: "2010", title: "Gas & Fire Equipment", description: "Became authorized distributor for major industrial gas and fire safety brands" },
-  { year: "2015", title: "Heavy Equipment Fleet", description: "Launched heavy equipment leasing division with modern fleet" },
-  { year: "2018", title: "NNPC/DPR Approval", description: "Became approved vendor for Nigeria's oil & gas sector" },
-  { year: "2022", title: "Jib Crane Manufacturing", description: "Started custom jib crane design, fabrication, and installation" },
-  { year: "2024", title: "500+ Projects", description: "Celebrating 50 years with 500+ successful projects nationwide" },
+  { year: "2000", title: "Company Founded", description: "Established in Benin City, Edo State" },
+  { year: "2005", title: "Telecom Division", description: "Expanded into telecommunication services" },
+  { year: "2010", title: "Oil & Gas Entry", description: "Became approved vendor for oil & gas sector" },
+  { year: "2015", title: "Real Estate Launch", description: "Started property development and sales" },
+  { year: "2020", title: "Fleet Expansion", description: "Expanded haulage and transport fleet" },
+  { year: "2024", title: "500+ Projects", description: "Celebrating 500+ successful projects nationwide" },
 ]
 
-const certifications = [
-  "ISO 9001:2015 Quality Management",
-  "ISO 14001:2015 Environmental Management", 
-  "ISO 45001:2018 Occupational Health & Safety",
-  "NNPC/DPR Approved Vendor",
-  "CAC Registered (RC 1234567)",
-  "NSE Corporate Member",
-  "COREN Registered Engineers",
-  "NISP Certified Safety Professionals",
+const services = [
+  { icon: Signal, name: "Telecommunication", desc: "Site maintenance, mast building, fibre optics" },
+  { icon: Home, name: "Real Estate", desc: "Property development & leasing" },
+  { icon: Flame, name: "Oil and Gas", desc: "Gas equipment & pipeline services" },
+  { icon: Truck, name: "Haulage & Transport", desc: "Aggregate haulage & equipment transport" },
+  { icon: Hammer, name: "Building & Construction", desc: "General civil works & building" },
 ]
 
 const leadership = [
-  {
-    name: "Engr. Maxwell Okonkwo",
-    role: "Founder & Chairman",
-    bio: "Visionary leader with 50+ years in construction and industrial services. Fellow of NSE, COREN registered.",
-    image: "/team/founder.jpg",
-  },
-  {
-    name: "Engr. Chika Okonkwo",
-    role: "Managing Director",
-    bio: "Civil engineer with 25+ years experience. MBA from Lagos Business School.",
-    image: "/team/md.jpg",
-  },
-  {
-    name: "Engr. Adaobi Nwosu",
-    role: "Technical Director",
-    bio: "Structural engineer specializing in steel construction and industrial facilities.",
-    image: "/team/technical.jpg",
-  },
-  {
-    name: "Mr. Ibrahim Musa",
-    role: "Operations Director",
-    bio: "Expert in heavy equipment operations, logistics, and project execution across Nigeria.",
-    image: "/team/operations.jpg",
-  },
+  { name: "Slymax Nig. Limited", role: "Company", bio: "Reliable indigenous company with unique business in the telecommunication and industrial sector in Nigeria." },
+]
+
+const directors = [
+  { name: "Usifoh Santos Sylvester", role: "Director" },
+  { name: "Usifoh Osahon Victor", role: "Director" },
+  { name: "Excellent Abrewensi", role: "Director" },
+]
+
+const clients = [
+  "IPT Power Tech",
+  "IHS Tower Company",
+  "RCC Reynolds Construction Company",
+  "Edo State Universal Basic Education",
+  "NDDC",
+  "BJ BISON",
 ]
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-blue-100 via-blue-50 to-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-300 rounded-full -translate-y-1/3 translate-x-1/3 opacity-20" aria-hidden="true" />
@@ -111,19 +70,18 @@ export default function AboutPage() {
               About Slymax Nigeria Limited
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              50+ Years of Building
+              Reliable Indigenous Company
               <br />
-              <span className="text-blue-600">Excellence Across Nigeria</span>
+              <span className="text-blue-600">in Telecom & Industrial Sector</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              From a modest construction firm in Owerri to one of Nigeria's leading integrated industrial solutions providers.
-              Our journey is built on trust, quality, and unwavering commitment to client success.
+              Slymax Nig. Limited is a reliable indigenous Company with unique business in the 
+              telecommunication and industrial sector in Nigeria.
             </p>
           </motion.div>
         </Container>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-blue-50/30 to-white" aria-labelledby="mission-heading">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -137,29 +95,23 @@ export default function AboutPage() {
                 Our Purpose
               </span>
               <h2 id="mission-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
-                Mission, Vision & Core Values
+                What We Do
               </h2>
-              <div className="space-y-6">
-                <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl border border-blue-200">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Target className="h-6 w-6 text-blue-600" aria-hidden="true" />
-                    Our Mission
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    To deliver world-class construction, industrial equipment, and material supply solutions that empower 
-                    our clients' success, while maintaining the highest standards of safety, quality, and environmental responsibility.
-                  </p>
-                </div>
-                <div className="p-6 bg-gradient-to-br from-cyan-50 to-cyan-100/50 rounded-2xl border border-cyan-200">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Lightbulb className="h-6 w-6 text-cyan-600" aria-hidden="true" />
-                    Our Vision
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    To be Nigeria's most trusted and innovative industrial solutions partner, recognized for excellence 
-                    in every project we undertake and every relationship we build.
-                  </p>
-                </div>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Slymax Nig. Limited offers services in any of the following areas:
+              </p>
+              <div className="space-y-4 mb-8">
+                {services.map((service) => (
+                  <div key={service.name} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-blue-100 hover:shadow-md transition-shadow">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                      <service.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">{service.name}</h3>
+                      <p className="text-sm text-gray-500">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -191,23 +143,17 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Company History Timeline */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50 relative overflow-hidden" aria-labelledby="history-heading">
         <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-25" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-60 h-60 bg-purple-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4">
               Our Journey
             </span>
             <h2 id="history-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              Five Decades of Growth & Innovation
+              Company Milestones
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              From humble beginnings to national recognition, every milestone represents our commitment to excellence
-            </p>
           </div>
-
           <div className="relative">
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-indigo-200 transform -translate-x-1/2 hidden lg:block" aria-hidden="true" />
             <div className="space-y-8">
@@ -243,97 +189,39 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Certifications */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" aria-labelledby="certifications-heading">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden" aria-labelledby="clients-heading">
         <div className="absolute top-0 left-0 w-80 h-80 bg-amber-200 rounded-full -translate-x-1/4 -translate-y-1/4 opacity-25" aria-hidden="true" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-200 rounded-full translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
-              Standards & Accreditations
+              Our Clients
             </span>
-            <h2 id="certifications-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
-              Certified Excellence in Every Operation
+            <h2 id="clients-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
+              Trusted by Industry Leaders
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              We maintain the highest industry standards through rigorous certifications and approvals
-            </p>
           </div>
-
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {certifications.map((cert, index) => (
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {clients.map((client, index) => (
               <motion.div
-                key={cert}
+                key={client}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
-                className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:shadow-amber-50 transition-all group"
+                className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:shadow-amber-50 transition-all text-center"
               >
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 text-white mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <CheckCircle className="h-7 w-7" aria-hidden="true" />
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 text-white mx-auto mb-4">
+                  <Building2 className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <h3 className="text-center font-medium text-gray-900 text-sm leading-relaxed">{cert}</h3>
+                <p className="font-semibold text-gray-900">{client}</p>
               </motion.div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50 relative overflow-hidden" aria-labelledby="leadership-heading">
-        <div className="absolute top-0 right-0 w-72 h-72 bg-teal-200 rounded-full translate-x-1/3 -translate-y-1/3 opacity-25" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-200 rounded-full -translate-x-1/4 translate-y-1/4 opacity-20" aria-hidden="true" />
-        <Container>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
-              Leadership Team
-            </span>
-            <h2 id="leadership-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
-              Guided by Experience & Vision
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Our leadership combines decades of technical expertise with strategic business acumen
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {leadership.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-white rounded-2xl border border-teal-100 overflow-hidden hover:shadow-xl transition-all"
-              >
-                <div className="aspect-square bg-gradient-to-br from-teal-100 to-emerald-200 flex items-center justify-center relative overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500" 
-                    onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.classList.add('opacity-100'); }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center z-10">
-                    <Building2 className="h-16 w-16 text-teal-300" aria-hidden="true" />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-teal-600 text-sm font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA */}
       <section className="py-20 lg:py-32 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/3 translate-x-1/3" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full translate-y-1/4 -translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -343,23 +231,21 @@ export default function AboutPage() {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Ready to Partner with Industry Leaders?
+              Ready to Partner with Us?
             </h2>
             <p className="text-lg text-blue-100 leading-relaxed mb-8">
-              Join hundreds of satisfied clients who trust Slymax Nigeria Limited for their construction, 
-              industrial equipment, and material supply needs.
+              Join hundreds of satisfied clients who trust Slymax Nigeria Limited for their 
+              telecommunication, real estate, oil & gas, and construction needs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl" variant="default">
+              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg" variant="default">
                 <Link href="/contact">
                   Get a Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Link>
               </Button>
               <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 border-white text-white hover:bg-white/10" variant="outline">
-                <Link href="/services">
-                  Explore Our Services
-                </Link>
+                <Link href="/services">Explore Our Services</Link>
               </Button>
             </div>
           </motion.div>

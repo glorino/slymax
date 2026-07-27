@@ -3,20 +3,18 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect, useCallback } from "react"
-import { CheckCircle, ArrowRight, Shield, Award, Users, Clock, HardHat, Building2, Truck, Flame, Wrench, Loader, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowRight, Shield, Award, Users, Building2, Signal, Home, Flame, Truck, Hammer, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { motion, AnimatePresence } from "framer-motion"
 
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85", alt: "Construction site with heavy machinery and workers" },
-  { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=85", alt: "Construction workers on site" },
-  { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=85", alt: "Construction site overview" },
-  { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=85", alt: "Steel structure framework" },
-  { src: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=85", alt: "Heavy equipment on construction site" },
-  { src: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1920&q=85", alt: "Industrial jib crane in warehouse facility" },
-  { src: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1920&q=85", alt: "Industrial equipment and machinery" },
-  { src: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=1920&q=85", alt: "Modern construction project" },
+  { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=85", alt: "Telecommunication tower maintenance work" },
+  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85", alt: "Construction site with heavy machinery" },
+  { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=85", alt: "Building construction project" },
+  { src: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=85", alt: "Heavy equipment for haulage and transport" },
+  { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=85", alt: "Oil and gas pipeline infrastructure" },
+  { src: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=1920&q=85", alt: "Real estate development project" },
 ]
 
 const stats = [
@@ -27,12 +25,11 @@ const stats = [
 ]
 
 const serviceHighlights = [
-  { icon: HardHat, label: "Construction" },
-  { icon: Building2, label: "Steel Supply" },
-  { icon: Wrench, label: "Scaffolding" },
-  { icon: Flame, label: "Gas & Fire" },
-  { icon: Truck, label: "Heavy Equipment" },
-  { icon: Loader, label: "Jib Cranes" },
+  { icon: Signal, label: "Telecom Services" },
+  { icon: Home, label: "Real Estate" },
+  { icon: Flame, label: "Oil & Gas" },
+  { icon: Truck, label: "Haulage" },
+  { icon: Hammer, label: "Building" },
 ]
 
 export function Hero() {
@@ -63,7 +60,6 @@ export function Hero() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Background Slides */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.div
@@ -83,13 +79,11 @@ export function Hero() {
             />
           </motion.div>
         </AnimatePresence>
-        {/* Heavy dark overlay for text readability */}
         <div className="absolute inset-0 bg-gray-900/75" />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-gray-900/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-900/20" />
       </div>
 
-      {/* Slide Controls */}
       <div className="absolute bottom-24 left-0 right-0 z-20 flex justify-center gap-2 px-4">
         {heroImages.map((_, index) => (
           <button
@@ -105,7 +99,6 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Previous/Next Buttons */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white hover:bg-white/30 transition-all hidden md:flex items-center justify-center"
@@ -123,7 +116,6 @@ export function Hero() {
 
       <Container className="relative z-10 py-20 lg:py-32">
         <div className="max-w-3xl">
-          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -131,10 +123,9 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md text-white text-sm font-medium mb-6 border border-white/20"
           >
             <Shield className="h-4 w-4 text-green-400" aria-hidden="true" />
-            <span>ISO 9001:2015 Certified | NNPC Approved | DPR Licensed</span>
+            <span>Telecom | Real Estate | Oil & Gas | Haulage | Building</span>
           </motion.div>
 
-          {/* Main heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,22 +134,20 @@ export function Hero() {
           >
             Your Trusted Partner in{" "}
             <span className="text-yellow-400">
-              Construction & Industrial Solutions
+              Telecom & Industrial Solutions
             </span>
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl"
           >
-            From steel reinforcement to heavy equipment leasing, scaffolding to fire protection 
-            — we deliver end-to-end construction and industrial solutions across Nigeria with 50+ years of proven expertise.
+            From telecommunication services to real estate development, oil & gas to haulage 
+            — we deliver end-to-end industrial solutions across Nigeria with proven expertise.
           </motion.p>
 
-          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -179,7 +168,6 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Service icons row */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -200,7 +188,6 @@ export function Hero() {
             ))}
           </motion.div>
 
-          {/* Stats row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,7 +208,6 @@ export function Hero() {
         </div>
       </Container>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -4,29 +4,17 @@ import Link from "next/link"
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import {
-  Building2,
-  Mail,
-  Phone,
-  MapPin,
-  Truck,
-  HardHat,
-  Flame,
-  Wrench,
-  Factory,
-  Users,
-  MessageSquare,
-  Share2,
-  Globe,
-  ChevronRight,
+  Mail, Phone, MapPin, Signal, Home, Flame, Truck, Hammer,
+  Users, MessageSquare, Share2, Globe, ChevronRight,
 } from "lucide-react"
 
 const companyInfo = {
   name: "Slymax Nigeria Limited",
-  tagline: "Your trusted partner in construction, industrial equipment, and material supply across Nigeria.",
-  address: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
+  tagline: "Reliable indigenous company in the telecommunication and industrial sector in Nigeria.",
+  address: "Plot 82 First East Circular Road, Benin City, Edo State, Nigeria",
   email: "info@slymaxnig.com",
   phone: "+234 803 408 8880",
-  phones: ["+234 803 408 8880", "+234 805 555 9758", "+234 802 301 9197"],
+  phones: ["+234 803 408 8880", "+234 802 301 9197", "+234 806 214 9620", "+234 703 394 2428"],
 }
 
 const quickLinks = [
@@ -38,13 +26,11 @@ const quickLinks = [
 ]
 
 const services = [
-  { name: "Construction", href: "/services/construction", icon: HardHat },
-  { name: "Steel Material Supply", href: "/services/steel-material-supply", icon: Building2 },
-  { name: "Scaffold Material", href: "/services/scaffold-material", icon: Wrench },
-  { name: "Gas Equipment", href: "/services/gas-equipment", icon: Flame },
-  { name: "Fire Equipment", href: "/services/fire-equipment", icon: Flame },
-  { name: "Heavy Equipment Leasing", href: "/services/heavy-equipment-leasing", icon: Truck },
-  { name: "Jib Crane Supply", href: "/services/jib-crane-supply", icon: Factory },
+  { name: "Telecommunication", href: "/services/telecommunication", icon: Signal },
+  { name: "Real Estate", href: "/services/real-estate", icon: Home },
+  { name: "Oil and Gas", href: "/services/oil-and-gas", icon: Flame },
+  { name: "Haulage & Transport", href: "/services/haulage-transport", icon: Truck },
+  { name: "Building & Construction", href: "/services/building-construction", icon: Hammer },
 ]
 
 const socialLinks = [
@@ -61,48 +47,29 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-2 xl:grid-cols-5">
           <div className="xl:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-3 text-2xl font-bold text-white" aria-label="Slymax Nigeria Limited - Home">
-              <Image
-                src="/logo.png"
-                alt="Slymax Nigeria Limited Logo"
-                width={48}
-                height={48}
-                className="h-10 w-10 object-contain"
-              />
+              <Image src="/logo.png" alt="Slymax Nigeria Limited Logo" width={48} height={48} className="h-10 w-10 object-contain" />
               <span>Slymax Nigeria Limited</span>
             </Link>
             <p className="text-gray-400 max-w-xs leading-relaxed">{companyInfo.tagline}</p>
 
             <div className="space-y-4 pt-4 border-t border-gray-800">
               <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="h-5 w-5 text-primary-500 shrink-0" aria-hidden="true" />
+                <MapPin className="h-5 w-5 text-orange-500 shrink-0" aria-hidden="true" />
                 <address className="not-italic text-sm">{companyInfo.address}</address>
               </div>
-              <a
-                href={`mailto:${companyInfo.email}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-primary-500 transition-colors"
-              >
-                <Mail className="h-5 w-5 text-primary-500 shrink-0" aria-hidden="true" />
+              <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-3 text-gray-400 hover:text-orange-500 transition-colors">
+                <Mail className="h-5 w-5 text-orange-500 shrink-0" aria-hidden="true" />
                 <span className="text-sm">{companyInfo.email}</span>
               </a>
-              <a
-                href={`tel:${companyInfo.phone}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-primary-500 transition-colors"
-              >
-                <Phone className="h-5 w-5 text-primary-500 shrink-0" aria-hidden="true" />
+              <a href={`tel:${companyInfo.phone}`} className="flex items-center gap-3 text-gray-400 hover:text-orange-500 transition-colors">
+                <Phone className="h-5 w-5 text-orange-500 shrink-0" aria-hidden="true" />
                 <span className="text-sm">{companyInfo.phones.join(" | ")}</span>
               </a>
             </div>
 
             <div className="flex items-center gap-4 pt-4 border-t border-gray-800">
               {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300"
-                  aria-label={social.name}
-                >
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-orange-600 hover:text-white transition-all duration-300" aria-label={social.name}>
                   <social.icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
@@ -115,10 +82,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="flex items-center gap-2 text-gray-400 hover:text-primary-500 transition-colors"
-                    >
+                    <Link href={link.href} className="flex items-center gap-2 text-gray-400 hover:text-orange-500 transition-colors">
                       <ChevronRight className="h-4 w-4" aria-hidden="true" />
                       {link.name}
                     </Link>
@@ -134,10 +98,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.name}>
-                    <Link
-                      href={service.href}
-                      className="flex items-center gap-2 text-gray-400 hover:text-primary-500 transition-colors"
-                    >
+                    <Link href={service.href} className="flex items-center gap-2 text-gray-400 hover:text-orange-500 transition-colors">
                       <service.icon className="h-4 w-4" aria-hidden="true" />
                       {service.name}
                     </Link>
@@ -148,17 +109,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Service Areas</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">Clients</h3>
             <ul className="space-y-3 text-gray-400">
-              <li>Lagos State</li>
-              <li>Rivers State</li>
-              <li>Delta State</li>
-              <li>Imo State</li>
-              <li>Abia State</li>
-              <li>Anambra State</li>
-              <li>Enugu State</li>
-              <li>Federal Capital Territory</li>
-              <li>Abuja FCT</li>
+              <li>IPT Power Tech</li>
+              <li>IHS Tower Company</li>
+              <li>RCC Reynolds Construction</li>
+              <li>Edo State UBEB</li>
+              <li>NDDC</li>
+              <li>BJ BISON</li>
+              <li>MTN Nigeria</li>
               <li>Nationwide Coverage</li>
             </ul>
           </div>
@@ -170,8 +129,8 @@ export function Footer() {
               &copy; {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-500">
-              <Link href="/privacy" className="hover:text-primary-500 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-primary-500 transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-orange-500 transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

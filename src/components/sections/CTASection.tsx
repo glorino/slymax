@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
@@ -8,27 +7,18 @@ import { ArrowRight, Shield, Award, Truck, Users, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 
 const guarantees = [
-  { icon: Shield, label: "Zero Incident Safety" },
-  { icon: Award, label: "ISO 9001 Certified" },
-  { icon: Truck, label: "Nationwide Delivery" },
-  { icon: Users, label: "200+ Expert Team" },
+  { icon: Shield, label: "Reliable Service" },
+  { icon: Award, label: "Quality Delivery" },
+  { icon: Truck, label: "Nationwide Coverage" },
+  { icon: Users, label: "Expert Team" },
 ]
 
 export function CTASection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden" aria-labelledby="cta-heading">
-      {/* Background - jib crane */}
-      <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1920&q=85"
-          alt="Industrial jib crane equipment"
-          fill
-          className="object-cover"
-        />
-        {/* Heavy overlay for text visibility */}
-        <div className="absolute inset-0 bg-gray-900/85" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/70 to-primary-900/80" />
-      </div>
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" aria-labelledby="cta-heading">
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full -translate-y-1/3 translate-x-1/3" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full translate-y-1/4 -translate-x-1/4" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -55,7 +45,7 @@ export function CTASection() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="gap-2 bg-white/15 backdrop-blur-md text-white border-white/25 hover:bg-white/25 px-8">
-                <Link href="tel:+2348031234567">
+                <Link href="tel:+2348034088880">
                   <Phone className="h-5 w-5" aria-hidden="true" />
                   Call Us Now
                 </Link>
@@ -72,7 +62,6 @@ export function CTASection() {
             </div>
           </motion.div>
 
-          {/* Contact Info Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,8 +78,8 @@ export function CTASection() {
                 <div>
                   <div className="text-sm text-gray-300 mb-1">Call Us</div>
                   <div className="text-white font-medium">+234 803 408 8880</div>
-                  <div className="text-white font-medium">+234 805 555 9758</div>
                   <div className="text-white font-medium">+234 802 301 9197</div>
+                  <div className="text-white font-medium">+234 806 214 9620</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -108,8 +97,8 @@ export function CTASection() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-300 mb-1">Head Office</div>
-                  <div className="text-white font-medium">21 Philip Omosigho Street</div>
-                  <div className="text-gray-200">EKEA off Sapele Road, Benin City, Edo State</div>
+                  <div className="text-white font-medium">Plot 82 First East Circular Road</div>
+                  <div className="text-gray-200">Benin City, Edo State, Nigeria</div>
                 </div>
               </div>
             </div>

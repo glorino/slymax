@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X, ChevronDown, Truck, HardHat, Building2, Flame, Wrench, Loader, Phone, Mail } from "lucide-react"
+import { Menu, X, ChevronDown, Phone, Mail, Signal, Home, Flame, Truck, Building2, Hammer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -21,13 +21,11 @@ const navigation = [
     name: "Services",
     href: "/services",
     children: [
-      { name: "Construction", href: "/services/construction", icon: HardHat, description: "Building & civil engineering projects" },
-      { name: "Steel Material Supply", href: "/services/steel-material-supply", icon: Building2, description: "Quality steel & structural materials" },
-      { name: "Scaffold Material", href: "/services/scaffold-material", icon: Wrench, description: "Scaffolding systems & accessories" },
-      { name: "Gas Equipment", href: "/services/gas-equipment", icon: Flame, description: "Industrial gas equipment & fittings" },
-      { name: "Fire Equipment", href: "/services/fire-equipment", icon: Flame, description: "Fire fighting & safety equipment" },
-      { name: "Heavy Equipment Leasing", href: "/services/heavy-equipment-leasing", icon: Truck, description: "Heavy machinery & equipment rental" },
-      { name: "Jib Crane Supply", href: "/services/jib-crane-supply", icon: Loader, description: "Jib cranes & lifting solutions" },
+      { name: "Telecommunication", href: "/services/telecommunication", icon: Signal, description: "Site maintenance, mast building, fibre optics" },
+      { name: "Real Estate", href: "/services/real-estate", icon: Home, description: "Property development & leasing" },
+      { name: "Oil and Gas", href: "/services/oil-and-gas", icon: Flame, description: "Gas equipment & pipeline services" },
+      { name: "Haulage & Transport", href: "/services/haulage-transport", icon: Truck, description: "Aggregate haulage & equipment transport" },
+      { name: "Building & Construction", href: "/services/building-construction", icon: Hammer, description: "General civil works & building" },
     ],
   },
   { name: "Projects", href: "/projects" },
@@ -46,6 +44,9 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const isHomePage = pathname === "/"
+  const showWhiteText = !scrolled && isHomePage
+
   return (
     <header
       className={cn(
@@ -60,7 +61,10 @@ export function Header() {
           <div className="flex h-16 lg:h-20 items-center justify-between">
             <Link
               href="/"
-              className="flex items-center gap-3 font-bold text-gray-900 hover:text-primary-700 transition-colors"
+              className={cn(
+                "flex items-center gap-3 font-bold transition-colors",
+                showWhiteText ? "text-white hover:text-yellow-300" : "text-gray-900 hover:text-primary-700"
+              )}
               aria-label="Slymax Nigeria Limited - Home"
             >
               <Image
@@ -85,10 +89,12 @@ export function Header() {
                       key={item.name}
                       href={item.href}
                       className={cn(
-                        "text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-600 after:transition-all hover:after:w-full",
+                        "text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-yellow-400 after:transition-all hover:after:w-full",
                         isActive
-                          ? "text-primary-600"
-                          : "text-gray-700 hover:text-primary-600"
+                          ? "text-yellow-400"
+                          : showWhiteText
+                            ? "text-white hover:text-yellow-300"
+                            : "text-gray-700 hover:text-primary-600"
                       )}
                       aria-current={isActive ? "page" : undefined}
                     >
@@ -103,8 +109,10 @@ export function Header() {
                       className={cn(
                         "flex items-center gap-1.5 text-sm font-medium transition-colors",
                         isActive
-                          ? "text-primary-600"
-                          : "text-gray-700 hover:text-primary-600"
+                          ? "text-yellow-400"
+                          : showWhiteText
+                            ? "text-white hover:text-yellow-300"
+                            : "text-gray-700 hover:text-primary-600"
                       )}
                       onMouseEnter={() => setOpenDropdown(item.name)}
                       onMouseLeave={() => setOpenDropdown(null)}
@@ -120,7 +128,7 @@ export function Header() {
                     </button>
                     {openDropdown === item.name && (
                       <div
-                        className="absolute left-0 top-full mt-2 w-64 rounded-xl bg-white shadow-lg border border-gray-100 py-2 animate-in fade-in-0 zoom-in-95 duration-200"
+                        className="absolute left-0 top-full mt-2 w-72 rounded-xl bg-white shadow-lg border border-gray-100 py-2 animate-in fade-in-0 zoom-in-95 duration-200"
                         role="menu"
                         onMouseEnter={() => setOpenDropdown(item.name)}
                         onMouseLeave={() => setOpenDropdown(null)}
@@ -133,8 +141,11 @@ export function Header() {
                             role="menuitem"
                             onClick={() => setOpenDropdown(null)}
                           >
-                            <child.icon className="h-4 w-4" aria-hidden="true" />
-                            {child.name}
+                            <child.icon className="h-4 w-4 text-primary-500" aria-hidden="true" />
+                            <div>
+                              <div className="font-medium">{child.name}</div>
+                              <div className="text-xs text-gray-400">{child.description}</div>
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -144,16 +155,21 @@ export function Header() {
               })}
 
               <Link href="/contact">
-                <Button size="sm" className="gap-2">
+                <Button size="sm" className="gap-2 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white border-0">
                   <span className="hidden sm:inline">Get Quote</span>
-                  <Truck className="h-4 w-4" aria-hidden="true" />
+                  <Phone className="h-4 w-4" aria-hidden="true" />
                 </Button>
               </Link>
             </div>
 
             <div className="flex items-center gap-4 lg:hidden">
               <button
-                className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                className={cn(
+                  "p-2 rounded-lg transition-colors",
+                  showWhiteText
+                    ? "text-white hover:bg-white/20"
+                    : "text-gray-700 hover:bg-gray-100"
+                )}
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 aria-controls="mobile-menu"

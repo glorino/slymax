@@ -4,19 +4,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
-import { Building2, Award, Shield, Users, Target, Globe, ArrowRight } from "lucide-react"
+import { Building2, Award, Users, Target, Globe, ArrowRight, Signal, Home, Flame, Truck } from "lucide-react"
 import { motion } from "framer-motion"
 
 const values = [
   {
-    icon: Shield,
-    title: "Safety First",
-    description: "Zero-incident safety culture with comprehensive HSE programs and continuous training for all personnel.",
+    icon: Target,
+    title: "Reliability",
+    description: "Consistent delivery of quality services across telecom, real estate, oil & gas, and construction sectors.",
   },
   {
     icon: Award,
     title: "Quality Excellence",
-    description: "ISO 9001:2015 certified processes ensuring every project meets international quality standards.",
+    description: "ISO-standard processes ensuring every project meets international quality benchmarks.",
   },
   {
     icon: Users,
@@ -24,9 +24,9 @@ const values = [
     description: "Long-term relationships built on transparency, reliability, and exceeding client expectations.",
   },
   {
-    icon: Target,
-    title: "Integrity",
-    description: "Ethical business practices, honest communication, and accountability in every interaction.",
+    icon: Signal,
+    title: "Innovation",
+    description: "Embracing modern technology and methods for efficient, sustainable solutions across all service areas.",
   },
 ]
 
@@ -40,14 +40,11 @@ const highlights = [
 export function AboutSection() {
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50" aria-labelledby="about-heading">
-      {/* Decorative background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full -translate-y-1/2 translate-x-1/2 opacity-30" aria-hidden="true" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-200 rounded-full translate-y-1/2 -translate-x-1/2 opacity-30" aria-hidden="true" />
-      <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-indigo-100 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-20" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Image Side - Construction engineers at site */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,18 +53,15 @@ export function AboutSection() {
             className="relative"
           >
             <div className="relative">
-              {/* Main image - engineers reviewing plans on construction site */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=85"
-                  alt="Slymax engineers reviewing construction blueprints on site"
+                  src="/profile-images/page8_Im55.jpg"
+                  alt="Slymax telecom engineer working on mast"
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover"
                 />
               </div>
-
-              {/* Second image - steel structure */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -76,15 +70,13 @@ export function AboutSection() {
                 className="absolute -bottom-8 -right-8 w-48 h-48 rounded-xl overflow-hidden shadow-xl border-4 border-white hidden lg:block"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&q=80"
-                  alt="Steel structure framework"
+                  src="/profile-images/page7_Im49.jpg"
+                  alt="Oil and gas equipment"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-
-              {/* Experience badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -95,13 +87,10 @@ export function AboutSection() {
                 <div className="text-3xl font-bold mb-1">50+</div>
                 <div className="text-blue-200 text-sm">Years of Excellence</div>
               </motion.div>
-
-              {/* Decorative corner */}
               <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-blue-200 rounded-2xl" aria-hidden="true" />
             </div>
           </motion.div>
 
-          {/* Content Side */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -113,19 +102,18 @@ export function AboutSection() {
             </span>
             <h2 id="about-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Building Nigeria&apos;s Future Since{" "}
-              <span className="text-blue-600">1974</span>
+              <span className="text-blue-600">2000</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-4">
-              From a modest construction firm in Owerri to one of Nigeria&apos;s leading integrated industrial solutions providers.
-              Our journey is built on trust, quality, and unwavering commitment to client success.
+              Slymax Nig. Limited is a reliable indigenous Company with unique business in the 
+              telecommunication and industrial sector in Nigeria.
             </p>
             <p className="text-gray-500 leading-relaxed mb-8">
-              We specialize in construction, steel material supply, scaffolding, gas & fire equipment, 
-              heavy equipment leasing, and jib crane supply — providing end-to-end solutions for industrial 
-              and commercial projects across all 36 states.
+              We offer services in Telecommunication, Real Estate, Oil and Gas, Haulage and Transport, 
+              and Building & Construction — providing end-to-end solutions for industrial and commercial 
+              projects across all 36 states.
             </p>
 
-            {/* Values grid */}
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {values.map((value, index) => (
                 <motion.div
@@ -156,7 +144,6 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Stats Bar */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
