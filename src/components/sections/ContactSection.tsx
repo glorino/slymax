@@ -10,14 +10,14 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Head Office",
-    details: "Plot 123, Industrial Layout, Owerri, Imo State, Nigeria",
+    details: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
     link: null,
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: "+234 803 123 4567",
-    link: "tel:+2348031234567",
+    details: "+234 803 408 8880",
+    link: "tel:+2348034088880",
   },
   {
     icon: Mail,

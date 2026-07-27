@@ -15,14 +15,14 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Head Office",
-    details: "Plot 123, Industrial Layout, Owerri, Imo State, Nigeria",
+    details: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
     link: null,
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: "+234 803 123 4567\n+234 805 987 6543",
-    link: "tel:+2348031234567",
+    details: "+234 803 408 8880\n+234 805 555 9758\n+234 802 301 9197",
+    link: "tel:+2348034088880",
   },
   {
     icon: Mail,
@@ -39,9 +39,9 @@ const contactInfo = [
 ]
 
 const altContactMethods = [
-  { icon: Phone, title: "Call Sales", desc: "Speak with our sales engineers", action: "Call Now", href: "tel:+2348031234567", color: "bg-green-50 text-green-600" },
+  { icon: Phone, title: "Call Sales", desc: "Speak with our sales engineers", action: "Call Now", href: "tel:+2348034088880", color: "bg-green-50 text-green-600" },
   { icon: Mail, title: "Email Us", desc: "Detailed inquiries & documents", action: "Email Us", href: "mailto:info@slymaxnig.com", color: "bg-blue-50 text-blue-600" },
-  { icon: MapPin, title: "Visit Office", desc: "Schedule a site visit or meeting", action: "Get Directions", href: "https://maps.google.com", color: "bg-purple-50 text-purple-600" },
+  { icon: MapPin, title: "Visit Office", desc: "Schedule a site visit or meeting", action: "Get Directions", href: "https://maps.google.com/?q=21+Philip+Omosigho+Street+Benin+City+Edo+State", color: "bg-purple-50 text-purple-600" },
 ]
 
 export default function ContactPage() {

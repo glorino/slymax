@@ -88,8 +88,9 @@ export function CTASection() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-300 mb-1">Call Us</div>
-                  <div className="text-white font-medium">+234 803 123 4567</div>
-                  <div className="text-white font-medium">+234 805 987 6543</div>
+                  <div className="text-white font-medium">+234 803 408 8880</div>
+                  <div className="text-white font-medium">+234 805 555 9758</div>
+                  <div className="text-white font-medium">+234 802 301 9197</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -108,8 +109,8 @@ export function CTASection() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-300 mb-1">Head Office</div>
-                  <div className="text-white font-medium">Plot 123, Industrial Layout</div>
-                  <div className="text-gray-200">Owerri, Imo State, Nigeria</div>
+                  <div className="text-white font-medium">21 Philip Omosigho Street</div>
+                  <div className="text-gray-200">EKEA off Sapele Road, Benin City, Edo State</div>
                 </div>
               </div>
             </div>

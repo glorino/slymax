@@ -22,9 +22,10 @@ import {
 const companyInfo = {
   name: "Slymax Nigeria Limited",
   tagline: "Your trusted partner in construction, industrial equipment, and material supply across Nigeria.",
-  address: "Plot 123, Industrial Layout, Owerri, Imo State, Nigeria",
+  address: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
   email: "info@slymaxnig.com",
-  phone: "+234 803 123 4567",
+  phone: "+234 803 408 8880",
+  phones: ["+234 803 408 8880", "+234 805 555 9758", "+234 802 301 9197"],
 }
 
 const quickLinks = [
@@ -81,7 +82,7 @@ export function Footer() {
                 className="flex items-center gap-3 text-gray-400 hover:text-primary-500 transition-colors"
               >
                 <Phone className="h-5 w-5 text-primary-500 shrink-0" aria-hidden="true" />
-                <span className="text-sm">{companyInfo.phone}</span>
+                <span className="text-sm">{companyInfo.phones.join(" | ")}</span>
               </a>
             </div>
 
