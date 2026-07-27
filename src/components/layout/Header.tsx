@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, ChevronDown, Truck, HardHat, Building2, Flame, Wrench, Loader, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -59,11 +60,17 @@ export function Header() {
           <div className="flex h-16 lg:h-20 items-center justify-between">
             <Link
               href="/"
-              className="flex items-center gap-2 text-xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
+              className="flex items-center gap-3 font-bold text-gray-900 hover:text-primary-700 transition-colors"
               aria-label="Slymax Nigeria Limited - Home"
             >
-              <Building2 className="h-8 w-8 text-primary-600" aria-hidden="true" />
-              <span className="hidden sm:block">Slymax Nigeria Limited</span>
+              <Image
+                src="/logo.svg"
+                alt="Slymax Nigeria Limited Logo"
+                width={44}
+                height={44}
+                className="h-10 w-10 lg:h-11 lg:w-11"
+              />
+              <span className="hidden sm:block text-lg lg:text-xl">Slymax Nigeria Limited</span>
             </Link>
 
             <div className="hidden lg:flex lg:items-center lg:gap-8">
