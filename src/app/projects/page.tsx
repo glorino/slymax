@@ -14,7 +14,7 @@ const projects = [
   {
     id: 1, title: "Telecom Mast Construction - Edo State", category: "Telecommunication", location: "Edo State", year: "2024", duration: "6 months", value: "₦180M",
     description: "Construction and maintenance of multiple telecommunication masts for major network operators across Edo State.",
-    image: "https://images.pexels.com/photos/6804600/pexels-photo-6804600.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Mast Construction", "Equipment Installation", "Power Systems", "Lightning Protection", "Site Commissioning", "Maintenance Contract"],
   },
   {
@@ -26,13 +26,13 @@ const projects = [
   {
     id: 3, title: "Gas Pipeline Installation - Rivers", category: "Oil and Gas", location: "Rivers State", year: "2024", duration: "8 months", value: "₦420M",
     description: "Gas regulation station equipment supply and pipeline installation services for industrial facility.",
-    image: "https://images.pexels.com/photos/247763/pexels-photo-247763.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/3855962/pexels-photo-3855962.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Pipeline Installation", "Gas Regulation Station", "SCADA Integration", "Safety Systems", "Commissioning", "Testing & Certification"],
   },
   {
     id: 4, title: "Aggregate Haulage - Federal Roads", category: "Haulage & Transport", location: "FCT Abuja", year: "2023", duration: "12 months", value: "₦250M",
     description: "Large-scale haulage of aggregates, granite, sand and laterite for federal road construction projects.",
-    image: "https://images.pexels.com/photos/6804600/pexels-photo-6804600.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Granite Haulage (50,000T)", "Sand Transport", "Laterite Supply", "Fleet of 30+ Trucks", "GPS Tracking", "24/7 Operations"],
   },
   {
@@ -50,7 +50,7 @@ const projects = [
   {
     id: 7, title: "Aviation Light Installation - Nigeria", category: "Telecommunication", location: "Multiple States", year: "2024", duration: "3 months", value: "₦85M",
     description: "Installation of aviation warning lights on telecom masts across multiple states in Nigeria.",
-    image: "https://images.pexels.com/photos/256368/pexels-photo-256368.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/6804600/pexels-photo-6804600.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Solar Aviation Lights", "LED Obstruction Lights", "Installation", "Testing", "Monthly Inspections", "Maintenance"],
   },
   {
