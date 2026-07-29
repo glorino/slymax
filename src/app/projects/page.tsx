@@ -14,37 +14,37 @@ const projects = [
   {
     id: 1, title: "Telecom Mast Construction - Edo State", category: "Telecommunication", location: "Edo State", year: "2024", duration: "6 months", value: "₦180M",
     description: "Construction and maintenance of multiple telecommunication masts for major network operators across Edo State.",
-    image: "https://images.pexels.com/photos/256368/pexels-photo-256368.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/6804600/pexels-photo-6804600.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Mast Construction", "Equipment Installation", "Power Systems", "Lightning Protection", "Site Commissioning", "Maintenance Contract"],
   },
   {
     id: 2, title: "Estate Development - Benin City", category: "Real Estate", location: "Edo State", year: "2023", duration: "18 months", value: "₦350M",
     description: "Real estate development project including residential buildings, roads, and infrastructure in Benin City.",
-    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["50 Residential Units", "Road Network", "Drainage System", "Security Infrastructure", "Landscaping", "Utility Connections"],
   },
   {
     id: 3, title: "Gas Pipeline Installation - Rivers", category: "Oil and Gas", location: "Rivers State", year: "2024", duration: "8 months", value: "₦420M",
     description: "Gas regulation station equipment supply and pipeline installation services for industrial facility.",
-    image: "https://images.pexels.com/photos/3846508/pexels-photo-3846508.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/247763/pexels-photo-247763.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Pipeline Installation", "Gas Regulation Station", "SCADA Integration", "Safety Systems", "Commissioning", "Testing & Certification"],
   },
   {
     id: 4, title: "Aggregate Haulage - Federal Roads", category: "Haulage & Transport", location: "FCT Abuja", year: "2023", duration: "12 months", value: "₦250M",
     description: "Large-scale haulage of aggregates, granite, sand and laterite for federal road construction projects.",
-    image: "https://images.pexels.com/photos/1635697/pexels-photo-1635697.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/6804600/pexels-photo-6804600.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Granite Haulage (50,000T)", "Sand Transport", "Laterite Supply", "Fleet of 30+ Trucks", "GPS Tracking", "24/7 Operations"],
   },
   {
     id: 5, title: "Fibre Optics Laying - South South", category: "Telecommunication", location: "Delta State", year: "2024", duration: "4 months", value: "₦320M",
     description: "Fibre optics cable laying and installation across multiple sites in the South South region.",
-    image: "https://images.pexels.com/photos/256368/pexels-photo-256368.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Underground Ducting", "Fibre Splicing", "OTDR Testing", "Cable Jointing", "Commissioning", "Documentation"],
   },
   {
     id: 6, title: "Commercial Building - Lagos", category: "Building & Construction", location: "Lagos State", year: "2023", duration: "14 months", value: "₦500M",
     description: "General building construction of commercial complex including offices, retail spaces and parking.",
-    image: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["4-Storey Complex", "Retail Spaces", "Parking Facility", "MEP Systems", "Interior Fit-out", "Landscaping"],
   },
   {
@@ -56,7 +56,7 @@ const projects = [
   {
     id: 8, title: "Residential Estate - Warri", category: "Real Estate", location: "Delta State", year: "2024", duration: "24 months", value: "₦600M",
     description: "Development of a luxury residential estate with 80 housing units and modern amenities.",
-    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["80 Housing Units", "Swimming Pool", "Club House", "Sports Facilities", "CCTV Security", "Green Areas"],
   },
 ]
