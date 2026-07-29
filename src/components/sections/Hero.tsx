@@ -9,21 +9,21 @@ import { Container } from "@/components/ui/container"
 import { motion, AnimatePresence } from "framer-motion"
 
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=85", alt: "Telecommunication tower at sunset" },
-  { src: "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=1920&q=85", alt: "Aerial view of real estate development" },
-  { src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=85", alt: "Oil and gas industrial facility" },
-  { src: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=85", alt: "Heavy truck fleet for haulage" },
-  { src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=85", alt: "Building construction in progress" },
-  { src: "https://images.unsplash.com/photo-1580894742597-87bc870ddb17?w=1920&q=85", alt: "Telecom mast installation work" },
+  { src: "https://images.unsplash.com/photo-1590650153855-d9e808233d40?w=1920&q=80", alt: "Telecommunication tower work" },
+  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80", alt: "Construction site with cranes" },
+  { src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=80", alt: "Oil and gas facility" },
+  { src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80", alt: "Heavy truck on road" },
+  { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80", alt: "Building under construction" },
+  { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80", alt: "Telecom mast at sunset" },
 ]
 
 const captions = [
-  { text: "Telecom & Industrial Solutions", highlight: "Telecom & Industrial Solutions" },
-  { text: "Building Nigeria's Future", highlight: "Building Nigeria's Future" },
-  { text: "Real Estate Development", highlight: "Real Estate Development" },
-  { text: "Oil & Gas Expertise", highlight: "Oil & Gas Expertise" },
-  { text: "Reliable Haulage Services", highlight: "Reliable Haulage Services" },
-  { text: "Trusted Since 2000", highlight: "Trusted Since 2000" },
+  { highlight: "Telecom & Industrial Solutions" },
+  { highlight: "Building Nigeria's Future" },
+  { highlight: "Real Estate Development" },
+  { highlight: "Oil & Gas Expertise" },
+  { highlight: "Reliable Haulage Services" },
+  { highlight: "Trusted Since 2000" },
 ]
 
 const captionsSubtext = [
@@ -153,43 +153,37 @@ export function Hero() {
             <span>Telecom | Real Estate | Oil & Gas | Haulage | Building</span>
           </motion.div>
 
-          <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-            <span>Your Trusted Partner in </span>
-            <div className="relative inline-block overflow-hidden align-bottom h-[1.2em] min-w-[200px]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
+            Your Trusted Partner in{" "}
+            <span className="text-sky-400 block sm:inline">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentCaption}
-                  initial={{ y: 60, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -60, opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="absolute left-0 bottom-0 text-sky-400 whitespace-nowrap"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="inline-block"
                 >
                   {captions[currentCaption].highlight}
                 </motion.span>
               </AnimatePresence>
-            </div>
-          </div>
+            </span>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl min-h-[3.5rem]"
-          >
+          <div className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl min-h-[3rem]">
             <AnimatePresence mode="wait">
-              <motion.span
+              <motion.p
                 key={currentCaption}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="block"
+                transition={{ duration: 0.3 }}
               >
                 {captionsSubtext[currentCaption]}
-              </motion.span>
+              </motion.p>
             </AnimatePresence>
-          </motion.p>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
