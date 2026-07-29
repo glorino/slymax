@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -36,6 +36,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const dropdownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -114,8 +115,13 @@ export function Header() {
                             ? "text-white hover:text-sky-300"
                             : "text-gray-700 hover:text-primary-600"
                       )}
-                      onMouseEnter={() => setOpenDropdown(item.name)}
-                      onMouseLeave={() => setOpenDropdown(null)}
+                      onMouseEnter={() => {
+                        if (dropdownTimerRef.current) clearTimeout(dropdownTimerRef.current)
+                        setOpenDropdown(item.name)
+                      }}
+                      onMouseLeave={() => {
+                        dropdownTimerRef.current = setTimeout(() => setOpenDropdown(null), 300)
+                      }}
                       aria-expanded={openDropdown === item.name}
                       aria-haspopup="true"
                       aria-label={`${item.name} menu`}
@@ -130,8 +136,13 @@ export function Header() {
                       <div
                         className="absolute left-0 top-full mt-2 w-72 rounded-xl bg-white shadow-lg border border-gray-100 py-2 animate-in fade-in-0 zoom-in-95 duration-200"
                         role="menu"
-                        onMouseEnter={() => setOpenDropdown(item.name)}
-                        onMouseLeave={() => setOpenDropdown(null)}
+                        onMouseEnter={() => {
+                          if (dropdownTimerRef.current) clearTimeout(dropdownTimerRef.current)
+                          setOpenDropdown(item.name)
+                        }}
+                        onMouseLeave={() => {
+                          dropdownTimerRef.current = setTimeout(() => setOpenDropdown(null), 300)
+                        }}
                       >
                         {item.children?.map((child) => (
                           <Link

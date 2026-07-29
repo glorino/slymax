@@ -3,9 +3,7 @@
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
 import { 
-  Mail, Phone, MapPin, Clock, Truck, HardHat, Building2, Flame, Wrench, Loader,
-  Send, Loader2, CheckCircle, AlertCircle, User, Building2 as BuildingIcon, 
-  Smartphone, MessageSquare, Calendar, MapPin as MapPinIcon
+  Mail, Phone, MapPin, Clock, Send,
 } from "lucide-react"
 import { motion } from "framer-motion"
 import ContactForm from "@/components/sections/ContactForm"
@@ -39,17 +37,17 @@ const contactInfo = [
 ]
 
 const altContactMethods = [
-  { icon: Phone, title: "Call Us", desc: "Speak with our team", action: "Call Now", href: "tel:+2348034088880", color: "bg-green-50 text-green-600" },
-  { icon: Mail, title: "Email Us", desc: "Detailed inquiries & documents", action: "Email Us", href: "mailto:info@slymaxnig.com", color: "bg-blue-50 text-blue-600" },
-  { icon: MapPin, title: "Visit Office", desc: "Schedule a site visit or meeting", action: "Get Directions", href: "https://maps.google.com/?q=21+Philip+Omosigho+Street+Benin+City+Edo+State", color: "bg-purple-50 text-purple-600" },
+  { icon: Phone, title: "Call Us", desc: "Speak with our team", action: "Call Now", href: "tel:+2348034088880", color: "bg-blue-50 text-blue-600" },
+  { icon: Mail, title: "Email Us", desc: "Detailed inquiries & documents", action: "Email Us", href: "mailto:info@slymaxnig.com", color: "bg-sky-50 text-sky-600" },
+  { icon: MapPin, title: "Visit Office", desc: "Schedule a site visit or meeting", action: "Get Directions", href: "https://maps.google.com/?q=21+Philip+Omosigho+Street+Benin+City+Edo+State", color: "bg-blue-50 text-blue-700" },
 ]
 
 export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
+      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-b from-slate-50 to-white">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-[0.03]" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,13 +55,13 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
               Get In Touch
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Let's Discuss
+              Let&apos;s Discuss
               <br />
-              <span className="text-primary-600">Your Project</span>
+              <span className="text-blue-600">Your Project</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Ready to start your next project? Our team of experts is here to provide consultation, 
@@ -77,10 +75,11 @@ export default function ContactPage() {
       <ContactForm />
 
       {/* Alternative Contact Methods */}
-      <section className="py-20 lg:py-32 bg-white" aria-labelledby="alt-contact-heading">
-        <Container>
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden" aria-labelledby="alt-contact-heading">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-30 blur-3xl" aria-hidden="true" />
+        <Container className="relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-4">
               Other Ways to Connect
             </span>
             <h2 id="alt-contact-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
@@ -117,7 +116,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-900 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <motion.div
@@ -130,11 +129,11 @@ export default function ContactPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-lg text-primary-100 leading-relaxed mb-8">
-              Join hundreds of satisfied clients across Nigeria. Let's build something remarkable together.
+            <p className="text-lg text-blue-100 leading-relaxed mb-8">
+              Join hundreds of satisfied clients across Nigeria. Let&apos;s build something remarkable together.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-primary-600 hover:bg-primary-50 shadow-lg hover:shadow-xl" variant="default">
+              <Button asChild size="xl" className="w-full sm:w-auto px-10 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl" variant="default">
                 <a href="/contact#contact-heading">
                   Request Free Quote
                   <Send className="ml-2 h-5 w-5" aria-hidden="true" />

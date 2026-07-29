@@ -55,10 +55,9 @@ const clients = [
 export default function AboutPage() {
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100 rounded-full -translate-y-1/3 translate-x-1/3 opacity-40 blur-3xl" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-56 h-56 bg-cyan-100 rounded-full translate-y-1/3 -translate-x-1/4 opacity-40 blur-3xl" aria-hidden="true" />
+      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-[0.03]" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full -translate-y-1/3 translate-x-1/3 opacity-25 blur-3xl" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,8 +142,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 lg:py-32 bg-slate-50 relative overflow-hidden" aria-labelledby="history-heading">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-30 blur-3xl" aria-hidden="true" />
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden" aria-labelledby="history-heading">
+        <div className="absolute top-0 right-0 w-56 h-56 bg-indigo-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-20 blur-3xl" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4">
@@ -207,8 +206,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 lg:py-32 bg-white relative overflow-hidden" aria-labelledby="clients-heading">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-50 rounded-full -translate-x-1/4 -translate-y-1/4 opacity-30 blur-3xl" aria-hidden="true" />
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden" aria-labelledby="clients-heading">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full -translate-x-1/4 -translate-y-1/4 opacity-20 blur-3xl" aria-hidden="true" />
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-4">
