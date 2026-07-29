@@ -9,12 +9,12 @@ import { Container } from "@/components/ui/container"
 import { motion, AnimatePresence } from "framer-motion"
 
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1590650153855-d9e808233d40?w=1920&q=80", alt: "Telecommunication tower work" },
-  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80", alt: "Construction site with cranes" },
-  { src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=80", alt: "Oil and gas facility" },
-  { src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80", alt: "Heavy truck on road" },
-  { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80", alt: "Building under construction" },
-  { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80", alt: "Telecom mast at sunset" },
+  { src: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Construction site with cranes and workers" },
+  { src: "https://images.pexels.com/photos/256368/pexels-photo-256368.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Telecommunication tower with antennas" },
+  { src: "https://images.pexels.com/photos/3846508/pexels-photo-3846508.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Oil and gas pipeline infrastructure" },
+  { src: "https://images.pexels.com/photos/1635697/pexels-photo-1635697.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Heavy duty truck on highway" },
+  { src: "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Modern building construction" },
+  { src: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Real estate development project" },
 ]
 
 const captions = [
