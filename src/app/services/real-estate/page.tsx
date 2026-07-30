@@ -47,12 +47,11 @@ const whyChooseUs = [
 export default function RealEstatePage() {
   return (
     <>
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/real-estate-hero.jpg" alt="Real estate development" fill className="object-cover opacity-15" priority />
+          <Image src="/real-estate-hero.jpg" alt="Real estate development" fill className="object-cover" priority />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
-        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/30" />
         <Container className="relative z-10 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -60,17 +59,17 @@ export default function RealEstatePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
                 Real Estate Services
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Premium Real Estate
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                Real Estate
                 <br />
-                <span className="text-emerald-600">Development & Investment</span>
+                <span className="text-emerald-400">Development & Leasing</span>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
+              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-xl">
                 Land development, property development, property leasing, and general civil works. 
-                Your trusted partner for real estate investment in Nigeria.
+                Trusted by investors and developers across Nigeria.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="gap-2 bg-emerald-600 hover:bg-emerald-700 text-white">
@@ -79,7 +78,7 @@ export default function RealEstatePage() {
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="gap-2">
+                <Button asChild variant="outline" size="lg" className="gap-2 bg-white/15 backdrop-blur-sm text-white border-white/25 hover:bg-white/25">
                   <Link href="/services">All Services</Link>
                 </Button>
               </div>

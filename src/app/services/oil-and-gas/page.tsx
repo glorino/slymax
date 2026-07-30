@@ -71,12 +71,11 @@ const safetyFeatures = [
 export default function OilGasPage() {
   return (
     <>
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/oil-gas-hero.jpg" alt="Oil and gas facility" fill className="object-cover opacity-15" priority />
+          <Image src="/oil-gas-hero.jpg" alt="Oil and gas facility" fill className="object-cover" priority />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
-        <div className="absolute top-0 right-0 w-80 h-80 bg-red-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/30" />
         <Container className="relative z-10 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -84,15 +83,15 @@ export default function OilGasPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-700 text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
                 Oil and Gas
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Oil & Gas
                 <br />
-                <span className="text-red-600">Equipment & Services</span>
+                <span className="text-red-400">Equipment & Services</span>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
+              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-xl">
                 Construction, steel material supply, scaffold material, gas equipment, fire equipment, 
                 heavy equipment leasing, pipeline services, and comprehensive oil & gas support solutions. 
                 Trusted by major operators across Nigeria.
@@ -104,7 +103,7 @@ export default function OilGasPage() {
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="gap-2">
+                <Button asChild variant="outline" size="lg" className="gap-2 bg-white/15 backdrop-blur-sm text-white border-white/25 hover:bg-white/25">
                   <Link href="/services">All Services</Link>
                 </Button>
               </div>
