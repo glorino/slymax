@@ -224,27 +224,27 @@ export default function TelecommunicationPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
-              <Image src="/telecom-gallery-1.jpg" alt="Telecom mast construction" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/telecom-gallery-1.jpg" alt="Telecom mast" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Mast Construction</p>
-                <p className="text-gray-300 text-sm">Telecom tower erection & installation</p>
+                <p className="text-white font-semibold text-lg">Telecom Mast</p>
+                <p className="text-gray-300 text-sm">Tower construction & erection</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
-              <Image src="/telecom-gallery-2.jpg" alt="Fibre optics laying" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/telecom-gallery-2.jpg" alt="Mast installation" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Fibre Optics</p>
-                <p className="text-gray-300 text-sm">Underground cable laying & splicing</p>
+                <p className="text-white font-semibold text-lg">Mast Installation</p>
+                <p className="text-gray-300 text-sm">Equipment mounting & commissioning</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
-              <Image src="/telecom-gallery-3.jpg" alt="Site maintenance" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/telecom-gallery-3.jpg" alt="Mast maintenance" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Site Maintenance</p>
-                <p className="text-gray-300 text-sm">Preventive & corrective maintenance</p>
+                <p className="text-white font-semibold text-lg">Mast Maintenance</p>
+                <p className="text-gray-300 text-sm">Inspection & repair services</p>
               </div>
             </motion.div>
           </div>
