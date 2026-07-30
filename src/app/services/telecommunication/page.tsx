@@ -182,6 +182,58 @@ export default function TelecommunicationPage() {
         </Container>
       </section>
 
+      <section className="py-20 lg:py-32 bg-white" aria-labelledby="mast-heading">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
+                Telecom Mast
+              </span>
+              <h2 id="mast-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                Telecom Mast Construction & Installation
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Slymax Nigeria Limited specializes in the construction, installation, and maintenance of telecommunication masts and towers. Our experienced team delivers end-to-end mast solutions for network operators across Nigeria.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {["Guyed Masts & Self-Supporting Towers", "Monopole Installation", "Structural Analysis & Inspection", "Tower Maintenance & Repair", "Aviation Warning Light Installation", "Foundation & Civil Works"].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button asChild size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white">
+                <Link href="/contact">
+                  Discuss Your Project
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <Image
+                src="/telecom-mast-featured.jpg"
+                alt="Telecom mast construction and installation"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50" aria-labelledby="clients-heading">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
