@@ -189,6 +189,66 @@ export default function OilGasPage() {
         </Container>
       </section>
 
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-700 text-sm font-medium mb-4">
+              Our Work
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+              Oil & Gas Projects
+            </h2>
+            <p className="text-lg text-gray-600">
+              A glimpse of our oil & gas operations and equipment in action across Nigeria.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0, duration: 0.5 }}
+              className="relative h-72 rounded-2xl overflow-hidden group"
+            >
+              <Image src="/oil-gallery-1.jpg" alt="Oil and gas pipeline operations" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Pipeline Operations</p>
+                <p className="text-gray-300 text-sm">Gas pipeline installation & maintenance</p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="relative h-72 rounded-2xl overflow-hidden group"
+            >
+              <Image src="/oil-gallery-2.jpg" alt="Industrial gas equipment" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Gas Equipment</p>
+                <p className="text-gray-300 text-sm">Industrial gas regulation systems</p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="relative h-72 rounded-2xl overflow-hidden group"
+            >
+              <Image src="/oil-gallery-3.jpg" alt="Oil and gas facility construction" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Facility Construction</p>
+                <p className="text-gray-300 text-sm">Industrial plant construction</p>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20 lg:py-32 bg-gradient-to-r from-red-600 via-red-700 to-red-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
         <Container className="relative z-10 text-center">
