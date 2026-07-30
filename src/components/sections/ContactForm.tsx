@@ -14,14 +14,14 @@ const contactInfo = [
   {
     icon: MapPinIcon,
     title: "Head Office",
-    details: "Plot 123, Industrial Layout, Owerri, Imo State, Nigeria",
+    details: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
     link: null,
   },
   {
     icon: Smartphone,
     title: "Call Us",
-    details: "+234 803 123 4567\n+234 805 987 6543",
-    link: "tel:+2348031234567",
+    details: "08034088880\n08055559758\n08023019197",
+    link: "tel:+2348034088880",
   },
   {
     icon: Mail,
@@ -38,13 +38,23 @@ const contactInfo = [
 ]
 
 const services = [
-  { value: "construction", label: "Construction", icon: HardHat },
-  { value: "steel-material-supply", label: "Steel Material Supply", icon: Building2 },
+  { value: "telecommunication", label: "Telecommunication", icon: Smartphone },
+  { value: "real-estate", label: "Real Estate", icon: Building2 },
+  { value: "oil-and-gas", label: "Oil and Gas", icon: Flame },
+  { value: "haulage-logistics", label: "Haulage & Logistics", icon: Truck },
+  { value: "building-construction", label: "Building & Construction", icon: HardHat },
+  { value: "steel-material-supply", label: "Steel Material Supply", icon: Wrench },
   { value: "scaffold-material", label: "Scaffold Material", icon: Wrench },
   { value: "gas-equipment", label: "Gas Equipment", icon: Flame },
   { value: "fire-equipment", label: "Fire Equipment", icon: Flame },
   { value: "heavy-equipment-leasing", label: "Heavy Equipment Leasing", icon: Truck },
-  { value: "jib-crane-supply", label: "Jib Crane Supply", icon: Loader },
+  { value: "technical-manpower", label: "Technical Manpower", icon: Loader },
+  { value: "procurement", label: "Procurement", icon: MessageSquare },
+  { value: "operation-maintenance", label: "Operation & Maintenance", icon: Wrench },
+  { value: "civil-structural", label: "Civil & Structural Engineering", icon: Building2 },
+  { value: "mechanical-services", label: "Mechanical Services", icon: Loader },
+  { value: "electrification", label: "Rural & Urban Electrification", icon: Smartphone },
+  { value: "water-engineering", label: "Water Engineering", icon: Smartphone },
   { value: "general", label: "General Inquiry", icon: MessageSquare },
 ]
 
@@ -235,7 +245,7 @@ export default function ContactForm() {
                       className={`w-full pl-10 pr-4 py-3 rounded-lg border focus:border-primary-500 focus:ring-2 focus:ring-primary-100 focus:outline-none transition-colors ${
                         errors.phone ? "border-red-500" : "border-gray-200"
                       }`}
-                      placeholder="+234 803 123 4567"
+                      placeholder="08034088880"
                       disabled={status === "submitting"}
                       aria-invalid={errors.phone ? "true" : "false"}
                       aria-describedby={errors.phone ? "phone-error" : undefined}
@@ -409,7 +419,7 @@ export default function ContactForm() {
 
               {status === "error" && (
                 <p className="mt-4 text-center text-sm text-red-600" role="alert">
-                  Something went wrong. Please try again or call us directly at +234 803 123 4567.
+                  Something went wrong. Please try again or call us directly at 08034088880.
                 </p>
               )}
 

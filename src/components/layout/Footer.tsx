@@ -29,7 +29,7 @@ const services = [
   { name: "Telecommunication", href: "/services/telecommunication", icon: Signal },
   { name: "Real Estate", href: "/services/real-estate", icon: Home },
   { name: "Oil and Gas", href: "/services/oil-and-gas", icon: Flame },
-  { name: "Haulage & Transport", href: "/services/haulage-transport", icon: Truck },
+  { name: "Haulage & Logistics", href: "/services/haulage-logistics", icon: Truck },
   { name: "Building & Construction", href: "/services/building-construction", icon: Hammer },
 ]
 

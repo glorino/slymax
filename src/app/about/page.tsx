@@ -29,7 +29,7 @@ const services = [
   { icon: Signal, name: "Telecommunication", desc: "Site maintenance, mast building, fibre optics" },
   { icon: Home, name: "Real Estate", desc: "Property development & leasing" },
   { icon: Flame, name: "Oil and Gas", desc: "Gas equipment & pipeline services" },
-  { icon: Truck, name: "Haulage & Transport", desc: "Aggregate haulage & equipment transport" },
+  { icon: Truck, name: "Haulage & Logistics", desc: "Aggregate haulage & equipment transport" },
   { icon: Hammer, name: "Building & Construction", desc: "General civil works & building" },
 ]
 

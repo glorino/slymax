@@ -42,8 +42,8 @@ const services = [
     border: "border-red-100",
   },
   {
-    name: "Haulage & Transport",
-    href: "/services/haulage-transport",
+    name: "Haulage & Logistics",
+    href: "/services/haulage-logistics",
     icon: Truck,
     description: "Haulage of aggregates, sharp sand, laterite materials, and transport for cars, trucks and heavy equipment.",
     features: ["Aggregate Haulage", "Sand & Laterite Transport", "Equipment Transport", "Fleet Management", "GPS Tracking", "Nationwide Delivery"],

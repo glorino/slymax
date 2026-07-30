@@ -31,7 +31,7 @@ const values = [
 ]
 
 const highlights = [
-  { number: "50+", label: "Years of Excellence", icon: Award },
+  { number: "17", label: "Years of Excellence", icon: Award },
   { number: "500+", label: "Projects Delivered", icon: Building2 },
   { number: "36", label: "States Covered", icon: Globe },
   { number: "200+", label: "Expert Team", icon: Users },
@@ -84,7 +84,7 @@ export function AboutSection() {
                 transition={{ delay: 0.4, duration: 0.5 }}
                 className="absolute -top-6 -left-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-5 rounded-2xl shadow-xl"
               >
-                <div className="text-3xl font-bold mb-1">50+</div>
+                <div className="text-3xl font-bold mb-1">17</div>
                 <div className="text-blue-200 text-sm">Years of Excellence</div>
               </motion.div>
               <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-blue-200 rounded-2xl" aria-hidden="true" />
@@ -109,8 +109,9 @@ export function AboutSection() {
               telecommunication and industrial sector in Nigeria.
             </p>
             <p className="text-gray-500 leading-relaxed mb-8">
-              We offer services in Telecommunication, Real Estate, Oil and Gas, Haulage and Transport, 
-              and Building & Construction — providing end-to-end solutions for industrial and commercial 
+              We offer services in Telecommunication, Real Estate, Oil and Gas, Haulage & Logistics, 
+              Building & Construction, Steel Material Supply, Scaffold Material, Gas Equipment, Fire Equipment, 
+              Heavy Equipment Leasing, and more — providing end-to-end solutions for industrial and commercial 
               projects across all 36 states.
             </p>
 

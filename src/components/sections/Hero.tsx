@@ -9,25 +9,25 @@ import { Container } from "@/components/ui/container"
 import { motion, AnimatePresence } from "framer-motion"
 
 const heroImages = [
-  { src: "https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Building construction site with cranes" },
-  { src: "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Telecommunication tower infrastructure" },
-  { src: "https://images.pexels.com/photos/3855962/pexels-photo-3855962.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Oil and gas pipeline facility" },
-  { src: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Heavy truck on highway" },
-  { src: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Modern building architecture" },
-  { src: "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1920", alt: "Residential estate development" },
+  { src: "/WhatsApp Image 2026-07-27 at 5.05.33 PM (1).jpeg", alt: "Building construction site with cranes" },
+  { src: "/WhatsApp Image 2026-07-27 at 5.05.33 PM.jpeg", alt: "Telecommunication tower infrastructure" },
+  { src: "/WhatsApp Image 2026-07-27 at 5.05.34 PM (1).jpeg", alt: "Oil and gas pipeline facility" },
+  { src: "/WhatsApp Image 2026-07-27 at 5.05.34 PM.jpeg", alt: "Heavy truck on highway" },
+  { src: "/WhatsApp Image 2026-07-27 at 5.05.35 PM.jpeg", alt: "Modern building architecture" },
+  { src: "/WhatsApp Image 2026-07-27 at 5.12.52 PM.jpeg", alt: "Residential estate development" },
 ]
 
 const captions = [
-  { highlight: "Telecom & Industrial Solutions" },
+  { highlight: "Welcome to Slymax Nigeria Limited" },
   { highlight: "Building Nigeria's Future" },
   { highlight: "Real Estate Development" },
   { highlight: "Oil & Gas Expertise" },
-  { highlight: "Reliable Haulage Services" },
+  { highlight: "Reliable Haulage & Logistics" },
   { highlight: "Trusted Since 2000" },
 ]
 
 const captionsSubtext = [
-  "End-to-end solutions across Nigeria with proven expertise.",
+  "Your trusted partner in telecommunication, real estate, oil & gas, haulage & logistics, and building & construction across Nigeria.",
   "Quality craftsmanship and reliable project delivery nationwide.",
   "Premium land development, property leasing & civil works.",
   "Gas equipment, pipeline services & safety systems.",
@@ -37,7 +37,7 @@ const captionsSubtext = [
 
 const stats = [
   { value: "500+", label: "Projects Completed", icon: Building2 },
-  { value: "50+", label: "Years Experience", icon: Award },
+  { value: "17", label: "Years Experience", icon: Award },
   { value: "200+", label: "Expert Team Members", icon: Users },
   { value: "36", label: "States Covered", icon: Truck },
 ]
@@ -46,8 +46,8 @@ const serviceHighlights = [
   { icon: Signal, label: "Telecom Services" },
   { icon: Home, label: "Real Estate" },
   { icon: Flame, label: "Oil & Gas" },
-  { icon: Truck, label: "Haulage" },
-  { icon: Hammer, label: "Building" },
+  { icon: Truck, label: "Haulage & Logistics" },
+  { icon: Hammer, label: "Building & Construction" },
 ]
 
 export function Hero() {
@@ -150,7 +150,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md text-white text-sm font-medium mb-6 border border-white/20"
           >
             <Shield className="h-4 w-4 text-green-400" aria-hidden="true" />
-            <span>Telecom | Real Estate | Oil & Gas | Haulage | Building</span>
+            <span>Telecom | Real Estate | Oil & Gas | Haulage & Logistics | Building & Construction</span>
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6">

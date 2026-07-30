@@ -37,7 +37,7 @@ const serviceOptions = [
   { value: "telecommunication", label: "Telecommunication Services", icon: Signal },
   { value: "real-estate", label: "Real Estate", icon: Home },
   { value: "oil-and-gas", label: "Oil and Gas", icon: Flame },
-  { value: "haulage-transport", label: "Haulage & Transport", icon: Truck },
+  { value: "haulage-logistics", label: "Haulage & Logistics", icon: Truck },
   { value: "building-construction", label: "Building & Construction", icon: Hammer },
 ]
 
@@ -176,7 +176,7 @@ export function ContactSection() {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-100 focus:outline-none transition-colors"
-                    placeholder="+234 803 123 4567"
+                    placeholder="08034088880"
                     disabled={status === "submitting"}
                   />
                 </div>

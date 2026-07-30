@@ -24,7 +24,7 @@ const navigation = [
       { name: "Telecommunication", href: "/services/telecommunication", icon: Signal, description: "Site maintenance, mast building, fibre optics" },
       { name: "Real Estate", href: "/services/real-estate", icon: Home, description: "Property development & leasing" },
       { name: "Oil and Gas", href: "/services/oil-and-gas", icon: Flame, description: "Gas equipment & pipeline services" },
-      { name: "Haulage & Transport", href: "/services/haulage-transport", icon: Truck, description: "Aggregate haulage & equipment transport" },
+      { name: "Haulage & Logistics", href: "/services/haulage-logistics", icon: Truck, description: "Aggregate haulage & equipment transport" },
       { name: "Building & Construction", href: "/services/building-construction", icon: Hammer, description: "General civil works & building" },
     ],
   },

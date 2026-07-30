@@ -15,7 +15,6 @@ const projects = [
     category: "Telecommunication",
     location: "Edo State",
     year: "2024",
-    value: "₦180M",
     description: "Construction and maintenance of multiple telecommunication masts for major network operators.",
     icon: Signal,
     gradient: "from-blue-500 to-blue-700",
@@ -26,7 +25,6 @@ const projects = [
     category: "Real Estate",
     location: "Edo State",
     year: "2023",
-    value: "₦350M",
     description: "Real estate development project including residential buildings and infrastructure.",
     icon: Home,
     gradient: "from-emerald-500 to-emerald-700",
@@ -37,7 +35,6 @@ const projects = [
     category: "Oil and Gas",
     location: "Rivers State",
     year: "2024",
-    value: "₦420M",
     description: "Gas regulation station equipment supply and pipeline installation services.",
     icon: Flame,
     gradient: "from-red-500 to-red-700",
@@ -45,10 +42,9 @@ const projects = [
   {
     id: 4,
     title: "Aggregate Haulage - Federal Roads",
-    category: "Haulage & Transport",
+    category: "Haulage & Logistics",
     location: "FCT Abuja",
     year: "2023",
-    value: "₦250M",
     description: "Large-scale haulage of aggregates, granite, sand and laterite for road construction projects.",
     icon: Truck,
     gradient: "from-blue-500 to-blue-700",
@@ -59,7 +55,6 @@ const projects = [
     category: "Telecommunication",
     location: "Delta State",
     year: "2024",
-    value: "₦320M",
     description: "Fibre optics cable laying and installation across multiple sites in the South South region.",
     icon: Signal,
     gradient: "from-blue-500 to-blue-700",
@@ -70,7 +65,6 @@ const projects = [
     category: "Building & Construction",
     location: "Lagos State",
     year: "2023",
-    value: "₦500M",
     description: "General building construction of commercial complex including offices and retail spaces.",
     icon: Hammer,
     gradient: "from-purple-500 to-purple-700",
@@ -145,8 +139,7 @@ export function ProjectsSection() {
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.description}</p>
                   
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <div className="text-lg font-bold text-emerald-600">{project.value}</div>
+                  <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                     <Link href="/contact" className="flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium">
                       Discuss Similar
                       <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />

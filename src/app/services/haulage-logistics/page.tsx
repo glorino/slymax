@@ -55,7 +55,7 @@ export default function HaulageTransportPage() {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
-                Haulage & Transport
+                Haulage & Logistics
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                 Reliable Haulage

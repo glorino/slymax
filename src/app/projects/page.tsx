@@ -12,56 +12,56 @@ import Image from "next/image"
 
 const projects = [
   {
-    id: 1, title: "Telecom Mast Construction - Edo State", category: "Telecommunication", location: "Edo State", year: "2024", duration: "6 months", value: "₦180M",
+    id: 1, title: "Telecom Mast Construction - Edo State", category: "Telecommunication", location: "Edo State", year: "2024", duration: "6 months",
     description: "Construction and maintenance of multiple telecommunication masts for major network operators across Edo State.",
     image: "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Mast Construction", "Equipment Installation", "Power Systems", "Lightning Protection", "Site Commissioning", "Maintenance Contract"],
   },
   {
-    id: 2, title: "Estate Development - Benin City", category: "Real Estate", location: "Edo State", year: "2023", duration: "18 months", value: "₦350M",
+    id: 2, title: "Estate Development - Benin City", category: "Real Estate", location: "Edo State", year: "2023", duration: "18 months",
     description: "Real estate development project including residential buildings, roads, and infrastructure in Benin City.",
     image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["50 Residential Units", "Road Network", "Drainage System", "Security Infrastructure", "Landscaping", "Utility Connections"],
   },
   {
-    id: 3, title: "Gas Pipeline Installation - Rivers", category: "Oil and Gas", location: "Rivers State", year: "2024", duration: "8 months", value: "₦420M",
+    id: 3, title: "Gas Pipeline Installation - Rivers", category: "Oil and Gas", location: "Rivers State", year: "2024", duration: "8 months",
     description: "Gas regulation station equipment supply and pipeline installation services for industrial facility.",
     image: "https://images.pexels.com/photos/3855962/pexels-photo-3855962.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Pipeline Installation", "Gas Regulation Station", "SCADA Integration", "Safety Systems", "Commissioning", "Testing & Certification"],
   },
   {
-    id: 4, title: "Aggregate Haulage - Federal Roads", category: "Haulage & Transport", location: "FCT Abuja", year: "2023", duration: "12 months", value: "₦250M",
+    id: 4, title: "Aggregate Haulage - Federal Roads", category: "Haulage & Logistics", location: "FCT Abuja", year: "2023", duration: "12 months",
     description: "Large-scale haulage of aggregates, granite, sand and laterite for federal road construction projects.",
     image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Granite Haulage (50,000T)", "Sand Transport", "Laterite Supply", "Fleet of 30+ Trucks", "GPS Tracking", "24/7 Operations"],
   },
   {
-    id: 5, title: "Fibre Optics Laying - South South", category: "Telecommunication", location: "Delta State", year: "2024", duration: "4 months", value: "₦320M",
+    id: 5, title: "Fibre Optics Laying - South South", category: "Telecommunication", location: "Delta State", year: "2024", duration: "4 months",
     description: "Fibre optics cable laying and installation across multiple sites in the South South region.",
     image: "https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Underground Ducting", "Fibre Splicing", "OTDR Testing", "Cable Jointing", "Commissioning", "Documentation"],
   },
   {
-    id: 6, title: "Commercial Building - Lagos", category: "Building & Construction", location: "Lagos State", year: "2023", duration: "14 months", value: "₦500M",
+    id: 6, title: "Commercial Building - Lagos", category: "Building & Construction", location: "Lagos State", year: "2023", duration: "14 months",
     description: "General building construction of commercial complex including offices, retail spaces and parking.",
     image: "https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["4-Storey Complex", "Retail Spaces", "Parking Facility", "MEP Systems", "Interior Fit-out", "Landscaping"],
   },
   {
-    id: 7, title: "Aviation Light Installation - Nigeria", category: "Telecommunication", location: "Multiple States", year: "2024", duration: "3 months", value: "₦85M",
+    id: 7, title: "Aviation Light Installation - Nigeria", category: "Telecommunication", location: "Multiple States", year: "2024", duration: "3 months",
     description: "Installation of aviation warning lights on telecom masts across multiple states in Nigeria.",
     image: "https://images.pexels.com/photos/6804600/pexels-photo-6804600.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["Solar Aviation Lights", "LED Obstruction Lights", "Installation", "Testing", "Monthly Inspections", "Maintenance"],
   },
   {
-    id: 8, title: "Residential Estate - Warri", category: "Real Estate", location: "Delta State", year: "2024", duration: "24 months", value: "₦600M",
+    id: 8, title: "Residential Estate - Warri", category: "Real Estate", location: "Delta State", year: "2024", duration: "24 months",
     description: "Development of a luxury residential estate with 80 housing units and modern amenities.",
     image: "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800",
     features: ["80 Housing Units", "Swimming Pool", "Club House", "Sports Facilities", "CCTV Security", "Green Areas"],
   },
 ]
 
-const filterCategories = ["All", "Telecommunication", "Real Estate", "Oil and Gas", "Haulage & Transport", "Building & Construction"]
+const filterCategories = ["All", "Telecommunication", "Real Estate", "Oil and Gas", "Haulage & Logistics", "Building & Construction"]
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("All")
@@ -148,9 +148,8 @@ export default function ProjectsPage() {
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{project.title}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.description}</p>
-                      <div className="grid grid-cols-2 gap-3 mb-4 p-4 bg-slate-50 rounded-xl">
+                      <div className="grid grid-cols-1 gap-3 mb-4 p-4 bg-slate-50 rounded-xl">
                         <div><p className="text-xs text-blue-600 uppercase tracking-wide font-medium">Duration</p><p className="font-medium text-gray-900">{project.duration}</p></div>
-                        <div><p className="text-xs text-blue-600 uppercase tracking-wide font-medium">Value</p><p className="font-medium text-gray-900">{project.value}</p></div>
                       </div>
                       <ul className="space-y-1.5 mb-6" role="list">
                         {project.features.slice(0, 3).map((feature) => (
@@ -195,7 +194,7 @@ export default function ProjectsPage() {
             <p className="text-lg text-gray-300 leading-relaxed">Two decades of building trust, one project at a time</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[{ value: "500+", label: "Projects Completed", icon: FileText }, { value: "50+", label: "Years Experience", icon: Calendar }, { value: "36", label: "States Covered", icon: MapPin }, { value: "200+", label: "Expert Team", icon: Building2 }].map((stat, index) => (
+            {[{ value: "500+", label: "Projects Completed", icon: FileText }, { value: "17", label: "Years Experience", icon: Calendar }, { value: "36", label: "States Covered", icon: MapPin }, { value: "200+", label: "Expert Team", icon: Building2 }].map((stat, index) => (
               <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="text-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 mx-auto mb-4 border border-white/20"><stat.icon className="h-7 w-7 text-sky-400" aria-hidden="true" /></div>
                 <div className="text-4xl sm:text-5xl font-bold mb-2">{stat.value}</div>
