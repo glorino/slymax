@@ -210,11 +210,11 @@ export default function OilGasPage() {
               transition={{ delay: 0, duration: 0.5 }}
               className="relative h-72 rounded-2xl overflow-hidden group"
             >
-              <Image src="/oil-gallery-1.jpg" alt="Oil and gas pipeline operations" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/oil-gallery-1.jpg" alt="Oil pipeline installation" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Pipeline Operations</p>
-                <p className="text-gray-300 text-sm">Gas pipeline installation & maintenance</p>
+                <p className="text-white font-semibold text-lg">Pipeline Installation</p>
+                <p className="text-gray-300 text-sm">Gas pipeline construction & laying</p>
               </div>
             </motion.div>
             <motion.div
@@ -224,11 +224,11 @@ export default function OilGasPage() {
               transition={{ delay: 0.1, duration: 0.5 }}
               className="relative h-72 rounded-2xl overflow-hidden group"
             >
-              <Image src="/oil-gallery-2.jpg" alt="Industrial gas equipment" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/oil-gallery-2.jpg" alt="Pipeline maintenance" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Gas Equipment</p>
-                <p className="text-gray-300 text-sm">Industrial gas regulation systems</p>
+                <p className="text-white font-semibold text-lg">Pipeline Maintenance</p>
+                <p className="text-gray-300 text-sm">Routine inspection & repair services</p>
               </div>
             </motion.div>
             <motion.div
@@ -238,11 +238,11 @@ export default function OilGasPage() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="relative h-72 rounded-2xl overflow-hidden group"
             >
-              <Image src="/oil-gallery-3.jpg" alt="Oil and gas facility construction" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/oil-gallery-3.jpg" alt="Pipeline facility" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Facility Construction</p>
-                <p className="text-gray-300 text-sm">Industrial plant construction</p>
+                <p className="text-white font-semibold text-lg">Gas Facility</p>
+                <p className="text-gray-300 text-sm">Gas regulation & metering stations</p>
               </div>
             </motion.div>
           </div>

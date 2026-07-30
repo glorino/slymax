@@ -175,6 +175,48 @@ export default function BuildingConstructionPage() {
         </Container>
       </section>
 
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
+              Our Work
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+              Construction Projects
+            </h2>
+            <p className="text-lg text-gray-600">
+              A glimpse of our building and construction projects across Nigeria.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
+              <Image src="/build-gallery-1.jpg" alt="Building construction" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Building Construction</p>
+                <p className="text-gray-300 text-sm">Residential & commercial buildings</p>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
+              <Image src="/build-gallery-2.jpg" alt="Civil works" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Civil Works</p>
+                <p className="text-gray-300 text-sm">Roads, drainage & infrastructure</p>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
+              <Image src="/build-gallery-3.jpg" alt="Project management" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Project Delivery</p>
+                <p className="text-gray-300 text-sm">Quality craftsmanship & handover</p>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20 lg:py-32 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
         <Container className="relative z-10 text-center">

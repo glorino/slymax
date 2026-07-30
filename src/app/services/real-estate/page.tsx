@@ -160,6 +160,48 @@ export default function RealEstatePage() {
         </Container>
       </section>
 
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
+              Our Work
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+              Real Estate Projects
+            </h2>
+            <p className="text-lg text-gray-600">
+              A glimpse of our property development and real estate projects.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
+              <Image src="/estate-gallery-1.jpg" alt="Residential estate development" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Residential Estates</p>
+                <p className="text-gray-300 text-sm">Modern housing development</p>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
+              <Image src="/estate-gallery-2.jpg" alt="Property development" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Property Development</p>
+                <p className="text-gray-300 text-sm">Commercial & residential buildings</p>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.5 }} className="relative h-72 rounded-2xl overflow-hidden group">
+              <Image src="/estate-gallery-3.jpg" alt="Estate planning" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Estate Planning</p>
+                <p className="text-gray-300 text-sm">Land surveying & documentation</p>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20 lg:py-32 bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" aria-hidden="true" />
         <Container className="relative z-10 text-center">
