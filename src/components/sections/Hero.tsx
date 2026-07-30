@@ -18,7 +18,7 @@ const heroImages = [
 ]
 
 const captions = [
-  { highlight: "Welcome to Slymax Nigeria Limited" },
+  { highlight: "Slymax Nigeria Limited" },
   { highlight: "Telecom & Industrial Solutions" },
   { highlight: "Building Nigeria's Future" },
   { highlight: "Real Estate Development" },
