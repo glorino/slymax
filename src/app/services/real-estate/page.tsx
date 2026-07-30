@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -47,7 +48,10 @@ export default function RealEstatePage() {
   return (
     <>
       <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0">
+          <Image src="/WhatsApp Image 2026-07-27 at 5.12.52 PM.jpeg" alt="Real estate development" fill className="object-cover opacity-15" priority />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
         <Container className="relative z-10 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
