@@ -3,34 +3,58 @@
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Flame, ArrowRight, CheckCircle, ChevronRight, Shield, Award, Wrench, Settings } from "lucide-react"
+import { Flame, ArrowRight, CheckCircle, ChevronRight, Shield, Award, Wrench, Settings, HardHat } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
 const oilGasServices = [
   {
-    title: "Gas Equipment Supply",
-    description: "Supply of industrial gas equipment including regulators, valves, piping systems and accessories.",
+    title: "Construction",
+    description: "General construction services for oil & gas facilities, industrial plants, and related infrastructure.",
     icon: Flame,
+    features: ["Facility Construction", "Industrial Plants", "Storage Tanks", "Process Piping", "Structural Steel", "Commissioning"],
+  },
+  {
+    title: "Steel Material Supply",
+    description: "Supply of steel materials, reinforcement bars, structural steel, and related products for oil & gas projects.",
+    icon: Wrench,
+    features: ["Reinforcement Bars", "Structural Steel", "Steel Fabrication", "Pipe Supports", "Bulk Supply", "Quality Certified"],
+  },
+  {
+    title: "Scaffold Material",
+    description: "Supply and erection of scaffolding systems for construction, maintenance, and turnaround projects.",
+    icon: Shield,
+    features: ["Scaffolding Supply", "Erection Services", "Safety Compliance", "Inspection", "Dismantling", "Project Support"],
+  },
+  {
+    title: "Gas Equipment",
+    description: "Supply of industrial gas equipment including regulators, valves, piping systems and accessories.",
+    icon: Settings,
     features: ["Gas Regulators", "Valves & Fittings", "Piping Systems", "Pressure Gauges", "Safety Devices", "Flow Meters"],
+  },
+  {
+    title: "Fire Equipment",
+    description: "Supply and installation of fire safety equipment, extinguishers, and alarm systems for oil & gas facilities.",
+    icon: Shield,
+    features: ["Fire Extinguishers", "Alarm Systems", "Fire Suppression", "Safety Training", "Maintenance", "Compliance"],
+  },
+  {
+    title: "Heavy Equipment Leasing",
+    description: "Leasing of heavy equipment including excavators, cranes, bulldozers, and loaders for oil & gas operations.",
+    icon: HardHat,
+    features: ["Excavators", "Cranes", "Bulldozers", "Loaders", "Operators Available", "Flexible Terms"],
   },
   {
     title: "Pipeline Services",
     description: "Pipeline construction, installation, maintenance, and repair services for oil & gas facilities.",
     icon: Wrench,
-    features: ["Pipeline Installation", "Pipeline Maintenance", "Leak Detection", "Cathodic Protection", " Pigging Services", "Hydrostatic Testing"],
+    features: ["Pipeline Installation", "Pipeline Maintenance", "Leak Detection", "Cathodic Protection", "Pigging Services", "Hydrostatic Testing"],
   },
   {
     title: "Oil & Gas Support",
     description: "Comprehensive support services for upstream, midstream, and downstream operations.",
     icon: Settings,
     features: ["Equipment Rental", "Technical Support", "Maintenance Contracts", "Spare Parts Supply", "Project Management", "HSE Compliance"],
-  },
-  {
-    title: "Gas Regulation Stations",
-    description: "Design, construction, and commissioning of gas regulation and metering stations.",
-    icon: Shield,
-    features: ["Station Design", "Equipment Installation", "SCADA Integration", "Metering Systems", "Safety Systems", "Commissioning"],
   },
 ]
 
@@ -65,7 +89,8 @@ export default function OilGasPage() {
                 <span className="text-red-600">Equipment & Services</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
-                Industrial gas equipment, pipeline services, and comprehensive oil & gas support solutions. 
+                Construction, steel material supply, scaffold material, gas equipment, fire equipment, 
+                heavy equipment leasing, pipeline services, and comprehensive oil & gas support solutions. 
                 Trusted by major operators across Nigeria.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -116,6 +141,10 @@ export default function OilGasPage() {
             <h2 id="services-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Comprehensive Oil & Gas Solutions
             </h2>
+            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+              From construction and material supply to equipment leasing and pipeline services — 
+              we deliver end-to-end solutions for the oil & gas industry.
+            </p>
           </div>
           <div className="grid gap-6 lg:grid-cols-2">
             {oilGasServices.map((service, index) => (
