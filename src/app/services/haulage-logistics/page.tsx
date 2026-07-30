@@ -47,7 +47,7 @@ export default function HaulageTransportPage() {
     <>
       <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/WhatsApp Image 2026-07-27 at 5.12.52 PM (1).jpeg" alt="Haulage and logistics" fill className="object-cover opacity-15" priority />
+          <Image src="/haulage-hero.jpg" alt="Haulage and logistics" fill className="object-cover opacity-15" priority />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
         <div className="absolute top-0 right-0 w-80 h-80 bg-blue-50 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />

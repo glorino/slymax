@@ -73,7 +73,7 @@ export default function OilGasPage() {
     <>
       <section className="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-slate-100 to-white overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/WhatsApp Image 2026-07-27 at 5.05.35 PM.jpeg" alt="Oil and gas facility" fill className="object-cover opacity-15" priority />
+          <Image src="/oil-gas-hero.jpg" alt="Oil and gas facility" fill className="object-cover opacity-15" priority />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
         <div className="absolute top-0 right-0 w-80 h-80 bg-red-100 rounded-full translate-x-1/3 -translate-y-1/3 opacity-40 blur-3xl" aria-hidden="true" />
