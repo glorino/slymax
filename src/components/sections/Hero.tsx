@@ -19,20 +19,20 @@ const heroImages = [
 
 const captions = [
   { highlight: "Welcome to Slymax Nigeria Limited" },
+  { highlight: "Telecom & Industrial Solutions" },
   { highlight: "Building Nigeria's Future" },
   { highlight: "Real Estate Development" },
   { highlight: "Oil & Gas Expertise" },
   { highlight: "Reliable Haulage & Logistics" },
-  { highlight: "Trusted Since 2000" },
 ]
 
 const captionsSubtext = [
   "Your trusted partner in telecommunication, real estate, oil & gas, haulage & logistics, and building & construction across Nigeria.",
+  "End-to-end solutions across Nigeria with proven expertise.",
   "Quality craftsmanship and reliable project delivery nationwide.",
   "Premium land development, property leasing & civil works.",
   "Gas equipment, pipeline services & safety systems.",
   "Aggregates, sand, laterite & heavy equipment transport.",
-  "Over 500 successful projects and counting.",
 ]
 
 const stats = [
@@ -154,21 +154,22 @@ export function Hero() {
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-            Your Trusted Partner in{" "}
-            <span className="text-sky-400 block sm:inline">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={currentCaption}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="inline-block"
-                >
-                  {captions[currentCaption].highlight}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentCaption}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="inline-block"
+              >
+                {currentCaption === 0 ? (
+                  <span className="text-sky-400">{captions[currentCaption].highlight}</span>
+                ) : (
+                  <>Your Trusted Partner in <span className="text-sky-400">{captions[currentCaption].highlight}</span></>
+                )}
+              </motion.span>
+            </AnimatePresence>
           </h1>
 
           <div className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl min-h-[3rem]">
