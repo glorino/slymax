@@ -9,6 +9,17 @@ import Link from "next/link"
 
 const services = [
   {
+    name: "Oil and Gas",
+    href: "/services/oil-and-gas",
+    icon: Flame,
+    description: "Construction, steel material supply, scaffold material, gas equipment, fire equipment, heavy equipment leasing, pipeline services, and oil & gas support solutions.",
+    features: ["Construction", "Steel Material Supply", "Scaffold Material", "Gas Equipment", "Fire Equipment", "Heavy Equipment Leasing"],
+    gradient: "from-red-500 to-red-700",
+    bgColor: "bg-red-50",
+    iconBg: "bg-gradient-to-br from-red-500 to-red-700",
+    border: "border-red-100",
+  },
+  {
     name: "Telecommunication Services",
     href: "/services/telecommunication",
     icon: Signal,
@@ -29,17 +40,6 @@ const services = [
     bgColor: "bg-emerald-50",
     iconBg: "bg-gradient-to-br from-emerald-500 to-emerald-700",
     border: "border-emerald-100",
-  },
-  {
-    name: "Oil and Gas",
-    href: "/services/oil-and-gas",
-    icon: Flame,
-    description: "Construction, steel material supply, scaffold material, gas equipment, fire equipment, heavy equipment leasing, pipeline services, and oil & gas support solutions.",
-    features: ["Construction", "Steel Material Supply", "Scaffold Material", "Gas Equipment", "Fire Equipment", "Heavy Equipment Leasing"],
-    gradient: "from-red-500 to-red-700",
-    bgColor: "bg-red-50",
-    iconBg: "bg-gradient-to-br from-red-500 to-red-700",
-    border: "border-red-100",
   },
   {
     name: "Haulage & Logistics",

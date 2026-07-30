@@ -9,6 +9,16 @@ import { motion } from "framer-motion"
 
 const services = [
   {
+    name: "Oil and Gas",
+    href: "/services/oil-and-gas",
+    icon: Flame,
+    description: "Construction, steel material supply, scaffold material, gas equipment, fire equipment, heavy equipment leasing, pipeline services, and oil & gas support solutions.",
+    features: ["Construction", "Steel Material Supply", "Scaffold Material", "Gas Equipment", "Fire Equipment", "Heavy Equipment Leasing"],
+    gradient: "from-red-600 to-red-800",
+    bgCard: "bg-red-50",
+    iconColor: "text-red-600",
+  },
+  {
     name: "Telecommunication Services",
     href: "/services/telecommunication",
     icon: Signal,
@@ -27,16 +37,6 @@ const services = [
     gradient: "from-emerald-600 to-emerald-800",
     bgCard: "bg-emerald-50",
     iconColor: "text-emerald-600",
-  },
-  {
-    name: "Oil and Gas",
-    href: "/services/oil-and-gas",
-    icon: Flame,
-    description: "Construction, steel material supply, scaffold material, gas equipment, fire equipment, heavy equipment leasing, pipeline services, and oil & gas support solutions.",
-    features: ["Construction", "Steel Material Supply", "Scaffold Material", "Gas Equipment", "Fire Equipment", "Heavy Equipment Leasing"],
-    gradient: "from-red-600 to-red-800",
-    bgCard: "bg-red-50",
-    iconColor: "text-red-600",
   },
   {
     name: "Haulage & Logistics",
