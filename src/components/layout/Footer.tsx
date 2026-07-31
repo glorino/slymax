@@ -7,15 +7,7 @@ import {
   Mail, Phone, MapPin, Signal, Home, Flame, Truck, Hammer,
   Users, MessageSquare, Share2, Globe, ChevronRight,
 } from "lucide-react"
-
-const companyInfo = {
-  name: "Slymax Nigeria Limited",
-  tagline: "Reliable indigenous company in the telecommunication and industrial sector in Nigeria.",
-  address: "21 Philip Omosigho Street, EKEA off Sapele Road, Benin City, Edo State",
-  email: "info@slymaxnig.com",
-  phone: "08034088880",
-  phones: ["08034088880", "08055559758", "08023019197"],
-}
+import { companyInfo } from "@/lib/constants"
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -34,10 +26,10 @@ const services = [
 ]
 
 const socialLinks = [
-  { name: "LinkedIn", href: "https://linkedin.com/company/slymax-nigeria", icon: Users },
-  { name: "Twitter", href: "https://twitter.com/slymaxnig", icon: MessageSquare },
-  { name: "Facebook", href: "https://facebook.com/slymaxnigeria", icon: Share2 },
-  { name: "Instagram", href: "https://instagram.com/slymaxnigeria", icon: Globe },
+  { name: "LinkedIn", href: companyInfo.social.linkedin, icon: Users },
+  { name: "Twitter", href: companyInfo.social.twitter, icon: MessageSquare },
+  { name: "Facebook", href: companyInfo.social.facebook, icon: Share2 },
+  { name: "Instagram", href: companyInfo.social.instagram, icon: Globe },
 ]
 
 export function Footer() {
@@ -61,7 +53,7 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-blue-500 shrink-0" aria-hidden="true" />
                 <span className="text-sm">{companyInfo.email}</span>
               </a>
-              <a href={`tel:${companyInfo.phone}`} className="flex items-center gap-3 text-gray-400 hover:text-blue-500 transition-colors">
+              <a href={`tel:+234${companyInfo.phone.substring(1)}`} className="flex items-center gap-3 text-gray-400 hover:text-blue-500 transition-colors">
                 <Phone className="h-5 w-5 text-blue-500 shrink-0" aria-hidden="true" />
                 <span className="text-sm">{companyInfo.phones.join(" | ")}</span>
               </a>

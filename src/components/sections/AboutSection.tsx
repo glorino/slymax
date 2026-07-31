@@ -67,7 +67,7 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="absolute -bottom-8 -right-8 w-48 h-48 rounded-xl overflow-hidden shadow-xl border-4 border-white hidden lg:block"
+                className="absolute -bottom-4 -right-4 w-40 h-40 rounded-xl overflow-hidden shadow-xl border-4 border-white hidden lg:block"
               >
                 <Image
                   src="/profile-images/page7_Im49.jpg"
@@ -82,12 +82,12 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="absolute -top-6 -left-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-5 rounded-2xl shadow-xl"
+                className="absolute -top-4 -left-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-4 rounded-2xl shadow-xl"
               >
                 <div className="text-3xl font-bold mb-1">17</div>
                 <div className="text-blue-200 text-sm">Years of Excellence</div>
               </motion.div>
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-blue-200 rounded-2xl" aria-hidden="true" />
+              <div className="absolute -top-2 -left-2 w-20 h-20 border-4 border-blue-200 rounded-2xl" aria-hidden="true" />
             </div>
           </motion.div>
 

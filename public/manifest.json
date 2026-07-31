@@ -1,7 +1,7 @@
 {
   "name": "Slymax Nigeria Limited",
   "short_name": "Slymax Nigeria",
-  "description": "Leading Nigerian company specializing in construction, steel material supply, scaffolding, gas & fire equipment, heavy equipment leasing, and jib crane supply.",
+  "description": "Leading Nigerian company specializing in oil & gas, telecommunication, real estate, haulage & logistics, and building & construction services.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -9,34 +9,33 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "categories": ["business", "construction", "industrial"],
-  "screenshots": [],
   "shortcuts": [
     {
       "name": "Get a Quote",
       "short_name": "Quote",
       "description": "Request a free quote for your project",
       "url": "/contact",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
     },
     {
       "name": "Our Services",
       "short_name": "Services",
       "description": "View all our services",
       "url": "/services",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
     }
   ]
 }

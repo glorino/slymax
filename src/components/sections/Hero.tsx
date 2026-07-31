@@ -111,7 +111,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
       </div>
 
-      <div className="absolute bottom-24 left-0 right-0 z-20 flex justify-center gap-2 px-4">
+      <div className="absolute bottom-16 left-0 right-0 z-20 flex justify-center gap-2 px-4">
         {heroImages.map((_, index) => (
           <button
             key={index}

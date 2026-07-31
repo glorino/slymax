@@ -4,8 +4,8 @@ import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
 import { 
   Mail, Phone, MapPin, Clock, Truck, HardHat, Building2, Flame, Wrench, Loader,
-  Send, Loader2, CheckCircle, AlertCircle, User, Building2 as BuildingIcon, 
-  Smartphone, MessageSquare, Calendar, MapPin as MapPinIcon
+  Send, Loader2, CheckCircle, AlertCircle, User, 
+  Smartphone, MessageSquare, Calendar, Building2 as BuildingIcon, MapPin as MapPinIcon
 } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"

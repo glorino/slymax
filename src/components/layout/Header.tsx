@@ -7,12 +7,7 @@ import { usePathname } from "next/navigation"
 import { Menu, X, ChevronDown, Phone, Mail, Signal, Home, Flame, Truck, Building2, Hammer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-
-const companyInfo = {
-  name: "Slymax Nigeria Limited",
-  phone: "08034088880",
-  email: "info@slymaxnig.com",
-}
+import { companyInfo } from "@/lib/constants"
 
 const navigation = [
   { name: "Home", href: "/" },
