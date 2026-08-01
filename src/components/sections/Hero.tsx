@@ -43,10 +43,10 @@ const stats = [
 ]
 
 const serviceHighlights = [
-  { icon: Signal, label: "Telecom Services" },
-  { icon: Home, label: "Real Estate" },
   { icon: Flame, label: "Oil & Gas" },
   { icon: Truck, label: "Haulage & Logistics" },
+  { icon: Signal, label: "Telecom Services" },
+  { icon: Home, label: "Real Estate" },
   { icon: Hammer, label: "Building & Construction" },
 ]
 
