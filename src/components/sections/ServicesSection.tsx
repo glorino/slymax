@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Signal, Home, Flame, Truck, Hammer, Wrench, Shield, HardHat, Loader, Building2 } from "lucide-react"
+import { ArrowRight, CheckCircle, Signal, Home, Flame, Truck, Hammer, Wrench, Shield, HardHat, Loader, Building2, Award, Users } from "lucide-react"
 import { motion } from "framer-motion"
 
 const services = [
@@ -17,6 +17,16 @@ const services = [
     gradient: "from-red-600 to-red-800",
     bgCard: "bg-red-50",
     iconColor: "text-red-600",
+  },
+  {
+    name: "Haulage & Logistics",
+    href: "/services/haulage-logistics",
+    icon: Truck,
+    description: "Haulage of aggregates, sharp sand, laterite materials, and transport for cars, trucks and heavy equipment.",
+    features: ["Aggregate Haulage", "Sand & Laterite", "Equipment Transport", "Fleet Services"],
+    gradient: "from-blue-600 to-blue-800",
+    bgCard: "bg-blue-50",
+    iconColor: "text-blue-600",
   },
   {
     name: "Telecommunication Services",
@@ -39,16 +49,6 @@ const services = [
     iconColor: "text-emerald-600",
   },
   {
-    name: "Haulage & Logistics",
-    href: "/services/haulage-logistics",
-    icon: Truck,
-    description: "Haulage of aggregates, sharp sand, laterite materials, and transport for cars, trucks and heavy equipment.",
-    features: ["Aggregate Haulage", "Sand & Laterite", "Equipment Transport", "Fleet Services"],
-    gradient: "from-blue-600 to-blue-800",
-    bgCard: "bg-blue-50",
-    iconColor: "text-blue-600",
-  },
-  {
     name: "Building & Construction",
     href: "/services/building-construction",
     icon: Hammer,
@@ -58,6 +58,13 @@ const services = [
     bgCard: "bg-purple-50",
     iconColor: "text-purple-600",
   },
+]
+
+const stats = [
+  { value: "500+", label: "Projects Completed", icon: Building2 },
+  { value: "17", label: "Years Experience", icon: Award },
+  { value: "200+", label: "Expert Team Members", icon: Users },
+  { value: "36", label: "States Covered", icon: Truck },
 ]
 
 export function ServicesSection() {
@@ -98,6 +105,25 @@ export function ServicesSection() {
             safety, and reliability on every project across Nigeria.
           </motion.p>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16"
+        >
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="bg-white rounded-xl p-6 border border-gray-100 text-center shadow-sm hover:shadow-md transition-shadow"
+            >
+              <stat.icon className="h-6 w-6 text-blue-600 mx-auto mb-3" aria-hidden="true" />
+              <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
+              <div className="text-sm text-gray-500">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (

@@ -27,7 +27,7 @@ const captions = [
 ]
 
 const captionsSubtext = [
-  "Your trusted partner in telecommunication, real estate, oil & gas, haulage & logistics, and building & construction across Nigeria.",
+  "Your trusted partner in oil & gas, haulage & logistics, telecommunication, real estate, and building & construction across Nigeria.",
   "End-to-end solutions across Nigeria with proven expertise.",
   "Quality craftsmanship and reliable project delivery nationwide.",
   "Premium land development, property leasing & civil works.",
@@ -187,30 +187,10 @@ export function Hero() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
-          >
-            <Button asChild size="lg" className="gap-2 px-8 py-4 text-base bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white border-0 shadow-lg shadow-blue-500/25">
-              <Link href="/contact">
-                Get a Free Quote
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="gap-2 px-8 py-4 text-base bg-white/15 backdrop-blur-md text-white border-white/25 hover:bg-white/25">
-              <Link href="/services">
-                Our Services
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
-              </Link>
-            </Button>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-wrap gap-3 mb-12"
+            className="flex flex-wrap gap-3"
           >
             {serviceHighlights.map((service, index) => (
               <motion.div
@@ -223,24 +203,6 @@ export function Hero() {
                 <service.icon className="h-4 w-4 text-sky-400" aria-hidden="true" />
                 {service.label}
               </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-4"
-          >
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center"
-              >
-                <stat.icon className="h-5 w-5 text-sky-400 mx-auto mb-2" aria-hidden="true" />
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-xs text-gray-300">{stat.label}</div>
-              </div>
             ))}
           </motion.div>
         </div>
